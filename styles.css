@@ -1,0 +1,224 @@
+*{
+    margin: 0;
+    padding: 0;
+box-sizing: border-box;
+}
+
+.container{
+    max-width: 1540px;
+}
+.logo{
+    padding-top: 10px;
+}
+.logo img{
+    border-radius: 50%;
+}
+.nav{
+    display: flex;
+    padding-left: 30px;
+    line-height: 40px;
+    background-color: #333;
+}
+.nav ul{
+    display: flex;
+    gap: 20px;
+    padding-top: 15px;
+}
+.nav ul li{
+    list-style-type: none;
+}
+.nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+}
+.nav >a{
+    padding-right: 30px;
+}
+.nav ul li a:hover{
+    color: #333;
+    background-color: #fff;
+    padding:5px 5px;
+}
+.lastlink{
+padding-left: 550px;
+}
+/*-------navabr end ------*/
+.banner{
+        background-image: linear-gradient(to bottom, #008000, #00FF00); /* Green gradient */
+        color: #fff;
+        text-align: center;
+        padding: 150px 0;
+    }
+
+    .banner h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .banner p {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+/*-------banner section end ------*/
+
+     .search-bar {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .search-bar input[type="text"] {
+        width: 300px;
+        padding: 10px;
+        border: none;
+        border-radius: 20px;
+        font-size: 16px;
+    }
+
+    .search-bar button {
+        background-color: #6ff7e8;
+        color: #fff;
+        border: none;
+        border-radius: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .search-bar button:hover {
+        background-color: #1f7ea1;
+    }
+         /*------ Search Bar End------ */
+
+         .featured-section {
+            margin-top: 40px;
+            padding: 40px 0;
+            text-align: center;
+        }
+        .featured-section h2{
+            padding-bottom: 30px;
+    }
+
+        /* Featured Farmers Styles */
+        .farmers-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .farmer-card {
+            width: 300px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .farmer-card img {
+            max-width: 100%;
+            height: auto;
+            filter: grayscale(100%);
+        }
+        .farmer-card img:hover{
+            filter: grayscale(0%);
+        }
+
+        /* Featured Products Styles */
+        .products-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .product-card {
+            width: 300px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+        }
+        .heading{
+            padding-top: 65px;
+        }
+        .product-card input{
+            background-color: #00FF00;
+            color: #333;
+            padding:5px 10px;
+            border: none;
+            margin-top: 10px;
+        }
+        .product-card input:hover{
+            background-color: #333;
+            color: #fff;
+        }
+        /*-------featured section end ------*/
+
+/* Footer Styles */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-info {
+    flex: 1;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.footer-info h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    flex: 1;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #55acee; /* Change this to your preferred hover color */
+}
+
+.copyright {
+    background-color: #222;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.copyright p {
+    font-size: 14px;
+    margin: 0;
+}
