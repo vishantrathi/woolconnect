@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div class="container">
+        <form action="signup.php" method="post">
+            <h2>Sign Up</h2>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="surname">Surname:</label>
+                <input type="text" id="surname" name="surname" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="state">State:</label>
+                <input type="text" id="state" name="state" value="Himachal Pradesh" readonly>
+            </div>
+            <div class="form-group">
+                <label for="district">District:</label>
+                <select id="district" name="district" required>
+                    <option value="" disabled selected>Select District</option>
+                    <option value="Bilaspur">Bilaspur</option>
+                    <option value="Chamba">Chamba</option>
+                    <option value="Hamirpur">Hamirpur</option>
+                    <option value="Kangra">Kangra</option>
+                    <option value="Kinnaur">Kinnaur</option>
+                    <option value="Kullu">Kullu</option>
+                    <option value="Lahaul and Spiti">Lahaul and Spiti</option>
+                    <option value="Mandi">Mandi</option>
+                    <option value="Shimla">Shimla</option>
+                    <option value="Sirmaur">Sirmaur</option>
+                    <option value="Solan">Solan</option>
+                    <option value="Una">Una</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="signup-btn">Sign Up</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
