@@ -47,6 +47,8 @@ padding-left: 550px;
 /*-------navabr end ------*/
 .banner{
         background-image: linear-gradient(to bottom, #008000, #00FF00); /* Green gradient */
+        background-image: url(./IMages/raSxSYFwHiyY36AmSkBQQ-transformed.png);
+        background-size: cover;
         color: #fff;
         text-align: center;
         padding: 150px 0;
@@ -151,7 +153,7 @@ padding-left: 550px;
             padding-top: 65px;
         }
         .product-card input{
-            background-color: #00FF00;
+            background-color: #21de21;
             color: #333;
             padding:5px 10px;
             border: none;

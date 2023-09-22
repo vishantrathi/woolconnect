@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+box-sizing: border-box;
+}
+.container{
+    max-width: 1540px;
+}
+container{
+    max-width: 1540px;
+}
+.logo{
+    padding-top: 10px;
+}
+.logo img{
+    border-radius: 50%;
+}
+.nav{
+    display: flex;
+    padding-left: 30px;
+    line-height: 40px;
+    background-color: #333;
+}
+.nav ul{
+    display: flex;
+    gap: 20px;
+    padding-top: 15px;
+}
+.nav ul li{
+    list-style-type: none;
+}
+.nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+}
+.nav >a{
+    padding-right: 30px;
+}
+.nav ul li a:hover{
+    color: #333;
+    background-color: #fff;
+    padding:5px 5px;
+}
+.lastlink{
+padding-left: 550px;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Display products in 4 columns */
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+}
+
+.product-card h2 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.product-card p {
+    font-size: 1rem;
+    color: #777;
+    margin: 10px 0;
+}
+
+.product-card button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.product-card button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}

@@ -5,7 +5,10 @@ body {
     padding: 0;
     background-color: #f4f4f4;
 }
-
+.logo img{
+    border-radius: 50%;
+    padding: 20px;
+}
 .container {
     max-width: 400px;
     margin: 0 auto;
@@ -35,6 +38,8 @@ label {
 }
 
 input[type="email"],
+input[type="tel"],
+input[type="text"],
 input[type="password"] {
     width: 100%;
     padding: 10px;

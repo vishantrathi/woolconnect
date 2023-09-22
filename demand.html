@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wool Demand</title>
+    <link rel="stylesheet" href="demand.css"> <!-- Add your CSS file -->
+</head>
+<body>
+    <header>
+        <div class="container">
+            <navbar>
+                <div class="nav">
+                    <a href="#" class="logo"><img src="./images/DALL·E 2023-09-11 20.54.30 - Make exact like this image.png" alt="logo" height="50px" width="50px"></a>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="contact.html">Contact Doctor</a></li>
+                        <li><a href="#team">Demand</a></li>
+                        <li><a href="Privacy policy.html">Privacy Policy</a></li>
+                        <li><a href="Trems and service.html">Terms and Services</a></li>
+        <!-- ... (navigation links) ... -->
+    </header>
+    
+    <div class="container">
+        <h1>Wool Demand</h1>
+        <p>Enter your requirements to buy bulk wool:</p>
+
+        <!-- Demand Form -->
+        <form id="demandForm">
+            <label for="quantity">Quantity (in kg):</label>
+            <input type="number" id="quantity" name="quantity" required>
+            
+            <label for="quality">Quality:</label>
+            <input type="text" id="quality" name="quality" required>
+            
+            <button type="submit">Submit Demand</button>
+        </form>
+    </div>
+
+    <!-- Pop-up Message -->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close" id="closePopup">&times;</span>
+            <p>We will contact you within 1 hour.</p>
+        </div>
+    </div>
+
+    <footer>
+        <!-- ... (footer content) ... -->
+    </footer>
+
+    <script src="demand.js"></script> <!-- Add your JavaScript file -->
+</body>
+</html>
