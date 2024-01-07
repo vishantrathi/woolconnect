@@ -4,7 +4,7 @@
 
 2. Wool Tracking: Allows users to track the production and transport of their woolfrom farm to market-
 
-3 Quality Assurance: Provides a platform for wool producers to ensure the quality of their wool and access to woolgrading services
+ 3 Quality Assurance: Provides a platform for wool producers to ensure the quality of their wool and access to woolgrading services
 
 4. Wool Storage and Warehousing: Helps farmers store and manage their wool inventory. 
 
