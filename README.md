@@ -1,9 +1,4 @@
-<div align=center>
-  <h3><b>📍Repository Visitor Count</b></h3>
-</div>
-<p align="center" >   
-  <img src="https://profile-counter.glitch.me/Hunterdii/count.svg" />  
-</p>
+
     An App-based solution for the wool sector in India which can have the following features is required: 
     
  1. Wool Market Information: Provides real-time market information on wool prices, trends, and news
