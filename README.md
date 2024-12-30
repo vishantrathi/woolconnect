@@ -1,4 +1,4 @@
-Live Linbk: https://vishantrathi.me/woolconnect/
+Live Link: https://vishantrathi.me/woolconnect/
 
  An App-based solution for the wool sector in India which can have the following features is required: 
     
