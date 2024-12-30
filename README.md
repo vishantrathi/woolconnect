@@ -1,5 +1,4 @@
-
-    An App-based solution for the wool sector in India which can have the following features is required: 
+ An App-based solution for the wool sector in India which can have the following features is required: 
     
  1. Wool Market Information: Provides real-time market information on wool prices, trends, and news
 
