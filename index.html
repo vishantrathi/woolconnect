@@ -4,118 +4,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="images\DALL·E 2023-09-11 20.54.30 - Make exact like this image.png">
+    <link rel="icon" href="images/DALL·E 2023-09-11 20.54.30 - Make exact like this image.png">
     <title>Wool Connect</title>
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <navbar>
-            <div class="nav">
-                <a href="#" class="logo"><img src="./images/DALL·E 2023-09-11 20.54.30 - Make exact like this image.png" alt="logo" height="50px" width="50px"></a>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact Doctor</a></li>
-                    <li><a href="demand.html">Demand</a></li>
-                    <li><a href="Privacy policy.html">Privacy Policy</a></li>
-                    <li><a href="Trems and service.html">Terms and Services</a></li>
-                </ul>
-                <div class="lastlink">
-                    <ul>
-                        <li><a href="Log in.html">Login</a></li>
-                        <li><a href="signup.html">SignUp</a></li>
-                    </ul>
-                </div>
-            </div>
-        </navbar>
+      <!-- Navbar Section -->
+      <nav class="navbar">
+        <div class="navcontainer">
+          <!-- Logo -->
+          <a href="#" class="logo">
+            <img
+              src="./images/DALL·E 2023-09-11 20.54.30 - Make exact like this image.png"
+              alt="logo"
+              height="50"
+              width="50"
+            />
+          </a>
 
-        <!-----navbar end-->
+          <!-- Navbar Toggle Button for Mobile -->
+          <button class="nav-toggle" id="nav-toggle">☰</button>
 
-        <section >
-        <div class="banner">
-                 <h1>Welcome to Wool Connect</h1>
-                <p>Connecting Wool Producers and Buyers</p>
+          <!-- Navbar Links -->
+          <ul class="nav-links" id="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact Doctor</a></li>
+            <li><a href="demand.html">Demand</a></li>
+            <li><a href="Privacy policy.html">Privacy Policy</a></li>
+            <li><a href="Trems and service.html">Terms and Services</a></li>
+          </ul>
+
+          <!-- Additional Links -->
+          <div class="lastlink">
+            <ul>
+              <li><a href="Log in.html">Login</a></li>
+              <li><a href="signup.html">SignUp</a></li>
+            </ul>
+          </div>
         </div>
-        </section>
-        <!------banner section complete----->
+      </nav>
 
-        <section>
-            <div class="search-bar">
-                <form>
-                    <input type="text" placeholder="Search for wool products...">
-                    <button type="submit">Search</button>
-                </form>
+      <!-----navbar end-->
+
+      <section class="hero">
+        <div class="banner">
+          <video autoplay muted loop class="banner-video">
+            <source src="images/bg.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div class="banner-content">
+            <h1>Welcome to Wool Connect</h1>
+            <p>Connecting Wool Producers and Buyers</p>
+          </div>
+          <!-- Scroll Down Icon -->
+          <a href="#search-section" class="scroll-down">
+            <img
+              src="./images/arrowDown.png"
+              alt="Down Arrow"
+              height="30"
+              width="30"
+            />
+          </a>
+        </div>
+      </section>
+
+      <section id="search-section" class="search">
+        <div class="search-bar">
+          <h2>Find Your Perfect Wool Product</h2>
+          <p>
+            Search across a wide range of wool products and connect with trusted
+            sellers.
+          </p>
+          <form>
+            <input type="text" placeholder="Search for wool products..." />
+            <button type="submit"><i class="fas fa-search"></i> Search</button>
+          </form>
+        </div>
+      </section>
+
+      <!------search bar section complete----->
+
+      <section>
+        <div class="featured-section">
+          <h2>Featured Farmers</h2>
+          <div class="farmers-container">
+            <div class="farmer-card">
+              <img
+                src="./images/DALL·E 2023-09-11 21.09.54 - A indian farmer with his sheep .png"
+                alt="Featured Farmer 1"
+              />
+              <h3>JAI SINGH</h3>
+              <p>Location: KULLU</p>
             </div>
-        </section>
-
-        <!------search bar section complete----->
-
-        <section>
-            <div class="featured-section">
-            <h2>Featured Farmers</h2>
-            <div class="farmers-container">
-                <div class="farmer-card">
-                    <img src="./images/DALL·E 2023-09-11 21.09.54 - A indian farmer with his sheep .png" alt="Featured Farmer 1">
-                    <h3>JAI SINGH</h3>
-                    <p>Location: KULLU</p>
-                </div>
-                    <div class="farmer-card">
-                    <img src="./images/DALL·E 2023-09-11 21.14.10 - A phadi farmer with his sheep.png" alt="Featured Farmer 2">
-                    <h3>PRADEEP NEGI</h3>
-                    <p>Location: SHIMLA</p>
-                </div>
-                </div>
+            <div class="farmer-card">
+              <img
+                src="./images/DALL·E 2023-09-11 21.14.10 - A phadi farmer with his sheep.png"
+                alt="Featured Farmer 2"
+              />
+              <h3>PRADEEP NEGI</h3>
+              <p>Location: SHIMLA</p>
             </div>
-        </section>
-<!------Featured Farmers section end-------->
+          </div>
+        </div>
+      </section>
+      <!------Featured Farmers section end-------->
 
-
-<section class="featured-section">
-    <h2>Featured Products</h2>
-    <div class="products-container">
-        <div class="product-card">
-            <img src="./images/stack-various-sweaters-isolated-white-background_93675-132438.png" alt="Featured Product 1" >
+      <section class="featured-section">
+        <h2>Featured Products</h2>
+        <div class="products-container">
+          <div class="product-card">
+            <img
+              src="./images/stack-various-sweaters-isolated-white-background_93675-132438.png"
+              alt="Featured Product 1"
+            />
             <h3>Woolen Clothes</h3>
             <a href="catalog.html"><button>Shop Now</button></a>
-        </div>
-        <div class="product-card">
-            <img src="./images//jean-marc-vieregge-cDKqFb-NOZc-unsplash.jpg" alt="Featured Product 2">
+          </div>
+          <div class="product-card">
+            <img
+              src="./images//jean-marc-vieregge-cDKqFb-NOZc-unsplash.jpg"
+              alt="Featured Product 2"
+            />
             <h3 class="heading">Woolen Yarns</h3>
-            <a href="catalog2.html"><button>Shop Now</button></a>   
+            <a href="catalog2.html"><button>Shop Now</button></a>
+          </div>
         </div>
-    </div>
-</section>
-<!------Featured Products section end-------->
+      </section>
+      <!------Featured Products section end-------->
 
-<footer class="footer">
-    <div class="footer-container">
-        <div class="footer-info">
-            <h3>Contact Us</h3>
-            <p>If you have any questions or inquiries, feel free to reach out to us. We're here to help!</p>
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-info">
+            <h2>Contact Us</h2>
+            <p>
+              If you have any questions or inquiries, feel free to reach out to
+              us.
+            </p>
             <p>Email: contact@woolconnect.com</p>
+            <div class="social-icons">
+              <a href="#" class="social-icon"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-icon"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="social-icon"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
         </div>
-        
-        <div class="social-icons">
-            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+
+        <div class="copyright">
+          <p>&copy; 2023 Wool Connect. All Rights Reserved.</p>
         </div>
+      </footer>
     </div>
-    
-    <div class="copyright">
-        <p>&copy; 2023 Wool Connect. All Rights Reserved.</p>
-    </div>
-</footer>
+  </body>
+  <script>
+    const toggleButton = document.getElementById("nav-toggle");
+    const navLinks = document.getElementById("nav-links");
 
-
-    </div>
-</body>
-
+    toggleButton.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  </script>
 </html>
