@@ -1,27 +1,39 @@
 /* Global Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    background: linear-gradient(135deg, #ffffff, #ffffff, #ffffff); /* Vibrant gradient background */
+    background-size: 400% 400%; /* Smooth gradient transition */
+    animation: gradientShift 8s ease infinite; /* Gradual background animation */
+    color: #333;
 }
 
 header {
-    background-color: #333;
+    background: linear-gradient(90deg, #6a0572, #a40606); /* Darker gradient header */
     color: #fff;
     text-align: center;
     padding: 20px 0;
+    border-bottom: 4px solid #ff758c;
 }
 
 header h1 {
     margin: 0;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 main {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #f9f9f9;
+    background: linear-gradient(145deg, #fff4e6, #fef4f0); /* Soft gradient for form background */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
     border: 1px solid #ddd;
+    position: relative; /* For button positioning */
+    animation: fadeIn 1.5s ease-out; /* Form fade-in animation */
 }
 
 .form-group {
@@ -31,6 +43,8 @@ main {
 label {
     display: block;
     font-weight: bold;
+    margin-bottom: 10px;
+    color: #555;
 }
 
 input[type="text"],
@@ -42,23 +56,105 @@ textarea {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
+    font-size: 1rem;
+    background-color: #f8f8f8; /* Light background for input fields */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
+input:focus,
+textarea:focus {
+    border-color: #ff758c;
+    outline: none;
+    box-shadow: 0 0 8px rgba(255, 117, 140, 0.5); /* Glow effect on focus */
+}
+
+textarea {
+    height: 120px;
+}
+
+/* Submit Button */
+/* Submit Button */
 button {
-    background-color: #333;
+    background: linear-gradient(90deg, #000000, #00b712, #f7ff00); /* Black, Green, Yellow gradient */
     color: #fff;
-    padding: 10px 20px;
+    padding: 15px 30px;
     border: none;
+    border-radius: 30px; /* Rounded corners for button */
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
     cursor: pointer;
+    margin-top: 20px;
+    display: block;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto; /* Center button horizontally */
+    transition: all 0.3s ease;
+    animation: bounce 1.5s infinite; /* Bounce animation for attention */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
 }
 
 button:hover {
-    background-color: #555;
+    transform: scale(1.1); /* Zoom-in effect on hover */
+    box-shadow: 0 10px 20px rgba(0, 183, 18, 0.6); /* Glow effect with green tint */
+    background: linear-gradient(90deg, #f7ff00, #00b712, #000000); /* Reverse gradient on hover */
 }
 
+button:active {
+    transform: scale(0.95); /* Shrink effect on click */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Darker shadow on click */
+}
+
+/* Animations */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* Footer Styling */
 footer {
-    background-color: #333;
+    background: linear-gradient(90deg, #6a0572, #a40606); /* Dark gradient footer */
     color: #fff;
     text-align: center;
     padding: 10px 0;
+    margin-top: 20px;
+    border-top: 4px solid #ff758c;
+}
+
+/* Animations */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
 }
