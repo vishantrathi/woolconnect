@@ -1,49 +1,83 @@
-*{
+* {
     margin: 0;
     padding: 0;
-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-.container{
+.container {
     max-width: 1540px;
+    margin: 0 auto;
 }
-.logo{
+
+.logo {
     padding-top: 10px;
 }
-.logo img{
+
+.logo img {
     border-radius: 50%;
+    width: 40px; /* Adjust size of logo */
+    height: 40px;
 }
-.nav{
+
+.nav {
     display: flex;
-    padding-left: 30px;
-    line-height: 40px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
     background-color: #333;
 }
-.nav ul{
+
+.nav ul {
     display: flex;
     gap: 20px;
-    padding-top: 15px;
+    padding-top: 5px;
 }
-.nav ul li{
+
+.nav ul li {
     list-style-type: none;
 }
-.nav ul li a{
+
+.nav ul li a {
     text-decoration: none;
     color: #fff;
-    font-size: 20px;
-    font-weight: 400;
+    font-size: 16px; /* Smaller font size */
+    font-weight: 500;
+    padding: 8px 12px; /* Improved padding */
+    border-radius: 4px; /* Rounded corners for better feel */
+    transition: all 0.3s ease;
 }
-.nav >a{
-    padding-right: 30px;
-}
-.nav ul li a:hover{
+
+.nav ul li a:hover {
     color: #333;
     background-color: #fff;
-    padding:5px 5px;
+    padding: 8px 12px; /* Keep padding on hover */
 }
-.lastlink{
-padding-left: 550px;
+
+.nav > a {
+    padding-right: 30px;
 }
+
+.lastlink {
+    margin-left: auto; /* Centers the last link in the navbar */
+}
+
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 0;
+    }
+
+    .nav ul li a {
+        font-size: 14px; /* Slightly smaller text on mobile */
+    }
+}
+
 /*-------navabr end ------*/
 .banner{
         background-image: linear-gradient(to bottom, #008000, #00FF00); /* Green gradient */
@@ -170,7 +204,9 @@ padding-left: 550px;
     background-color: #333;
     color: #fff;
     padding: 50px 0;
+    font-family: 'Arial', sans-serif;
     text-align: center;
+    position: relative;
 }
 
 .footer-container {
@@ -179,30 +215,89 @@ padding-left: 550px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    gap: 20px;
 }
 
 .footer-info {
-    flex: 1;
+    flex: 2;
     text-align: left;
     padding-left: 20px;
+    margin-bottom: 30px;
 }
 
 .footer-info h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.footer-info p {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.contact-form {
+    flex: 3;
+    padding: 0 20px;
+    background: #444;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.contact-form h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(45deg, #00bcd4, #8e44ad);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: linear-gradient(45deg, #8e44ad, #00bcd4);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .social-icons {
     flex: 1;
     text-align: right;
-    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 .social-icon {
     display: inline-block;
     margin: 0 10px;
-    font-size: 24px;
+    font-size: 28px;
     color: #fff;
     text-decoration: none;
     transition: color 0.3s ease;
@@ -214,13 +309,35 @@ padding-left: 550px;
 
 .copyright {
     background-color: #222;
-    padding: 10px 0;
-    text-align: center;
-    margin-top: 50px;
     padding: 20px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin-top: 30px;
 }
 
 .copyright p {
     font-size: 14px;
     margin: 0;
+    color: #aaa;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-info,
+    .contact-form,
+    .social-icons {
+        flex: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .contact-form {
+        margin-bottom: 20px;
+    }
 }
