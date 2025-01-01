@@ -1,6 +1,6 @@
-Live Link: https://vishantrathi.me/woolconnect/
+**Live Link:** https://vishantrathi.me/woolconnect/
 
-How to Contribute:
+**How to Contribute:**
 1.	Fork the repository: Click the ‘Fork’ button at the top-right corner of this page to create a copy of this repository on your GitHub account.
 2.	Clone the repository: Use the command below to clone the forked repository to your local machine:
     git clone https://github.com/your-username/repository-name.git
@@ -13,13 +13,13 @@ How to Contribute:
     git push origin feature-branch
 7.	Create a Pull Request: Navigate to this repository on GitHub, click “New Pull Request,” and follow the prompts.
 
-What We Expect:
+**What We Expect:**
 •	Clarity: Make sure your code is well-documented with comments and follows consistent formatting.
 •	Efficiency: Algorithms should be optimized for performance, with explanations if needed.
 •	Readability: Ensure your code is easy to understand for other contributors or learners.
 •	Tested Code: Please test your contributions before submitting a Pull Request (PR).
 
- An App-based solution for the wool sector in India which can have the following features is required:   
+ **An App-based solution for the wool sector in India which can have the following features is required:** 
  1. Wool Market Information: Provides real-time market information on wool prices, trends, and news
  2. Wool Tracking: Allows users to track the production and transport of their woolfrom farm to market-
  3 Quality Assurance: Provides a platform for wool producers to ensure the quality of their wool and access to woolgrading services
