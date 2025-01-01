@@ -1,5 +1,7 @@
 **Live Link:** https://vishantrathi.me/woolconnect/
 
+Please star the repo before raising Pull Request 
+
 **How to Contribute:**
 1.	Fork the repository: Click the ‘Fork’ button at the top-right corner of this page to create a copy of this repository on your GitHub account.
 2.	Clone the repository: Use the command below to clone the forked repository to your local machine:
