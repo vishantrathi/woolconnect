@@ -1,242 +1,302 @@
-* {
+/* Global Styles */
+body, html {
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 .container {
-    max-width: 1540px;
+    width: 100%;
     margin: 0 auto;
 }
 
-.logo {
-    padding-top: 10px;
+/* Navbar */
+.navcontainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1%;
+    margin: 0 auto;
 }
 
-.logo img {
-    border-radius: 50%;
-    width: 40px; /* Adjust size of logo */
-    height: 40px;
-}
-
-.nav {
+.navbar {
+    background: linear-gradient(to right, #0f0f0f, #1b1b1b);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
-    background-color: #333;
+    padding: 10px 10px;
+    top: 0;
+    z-index: 1000;
 }
 
-.nav ul {
+.logo img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.nav-links {
     display: flex;
-    gap: 20px;
-    padding-top: 5px;
+    gap: 50px;
+    list-style: none;
 }
 
-.nav ul li {
-    list-style-type: none;
-}
-
-.nav ul li a {
+.nav-links li a {
     text-decoration: none;
     color: #fff;
-    font-size: 16px; /* Smaller font size */
-    font-weight: 500;
-    padding: 8px 12px; /* Improved padding */
-    border-radius: 4px; /* Rounded corners for better feel */
-    transition: all 0.3s ease;
+    font-size: 16px;
+    transition: color 0.3s ease;
 }
 
-.nav ul li a:hover {
-    color: #333;
-    background-color: #fff;
-    padding: 8px 12px; /* Keep padding on hover */
+.nav-links li a:hover {
+    color: #ccc;
 }
 
-.nav > a {
-    padding-right: 30px;
+.lastlink ul {
+    display: flex;
+    gap: 10px;
+    list-style: none;
 }
 
-.lastlink {
-    margin-left: auto; /* Centers the last link in the navbar */
+.lastlink a {
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
-@media (max-width: 768px) {
-    .nav {
+.lastlink a:hover {
+    background: #fff;
+    color: #000000;
+}
+
+/* Mobile Navbar Toggle */
+.nav-toggle {
+    display: none;
+    font-size: 1.8rem;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 1059px) {
+    .nav-links, .lastlink {
+        display: none;
         flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .nav ul {
-        flex-direction: column;
-        gap: 10px;
-        padding-top: 0;
-    }
-
-    .nav ul li a {
-        font-size: 14px; /* Slightly smaller text on mobile */
-    }
-}
-
-/*-------navabr end ------*/
-.banner{
-        background-image: linear-gradient(to bottom, #008000, #00FF00); /* Green gradient */
-        background-image: url("images/raSxSYFwHiyY36AmSkBQQ-transformed.png");
-        background-size: cover;
-        color: #fff;
-        text-align: center;
-        padding: 150px 0;
-    }
-
-    .banner h1 {
-        font-size: 36px;
-        margin-bottom: 20px;
-    }
-
-    .banner p {
-        font-size: 18px;
-        margin-bottom: 30px;
-    }
-/*-------banner section end ------*/
-
-     .search-bar {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        gap: 20px;
+        background: rgba(35, 35, 35, 0.95);
         text-align: center;
         padding: 20px;
+        z-index: 1001;
     }
 
-    .search-bar input[type="text"] {
-        width: 300px;
-        padding: 10px;
-        border: none;
-        border-radius: 20px;
-        font-size: 16px;
+    .nav-links.active, .lastlink.active {
+        display: flex;
     }
 
-    .search-bar button {
-        background-color: #6ff7e8;
-        color: #fff;
-        border: none;
-        border-radius: 20px;
-        padding: 10px 20px;
-        font-size: 16px;
-        cursor: pointer;
+    .nav-toggle {
+        display: block;
     }
+}
 
-    .search-bar button:hover {
-        background-color: #1f7ea1;
-    }
-         /*------ Search Bar End------ */
-
-         .featured-section {
-            margin-top: 40px;
-            padding: 40px 0;
-            text-align: center;
-        }
-        .featured-section h2{
-            padding-bottom: 30px;
-    }
-
-        /* Featured Farmers Styles */
-        .farmers-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .farmer-card {
-            width: 300px;
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .farmer-card img {
-            max-width: 100%;
-            height: auto;
-            filter: grayscale(100%);
-        }
-        .farmer-card img:hover{
-            filter: grayscale(0%);
-        }
-
-        /* Featured Products Styles */
-        .products-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .product-card {
-            width: 300px;
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .product-card img {
-            max-width: 100%;
-            height: auto;
-        }
-        .heading{
-            padding-top: 65px;
-        }
-        .product-card input{
-            background-color: #21de21;
-            color: #333;
-            padding:5px 10px;
-            border: none;
-            margin-top: 10px;
-        }
-        .product-card input:hover{
-            background-color: #333;
-            color: #fff;
-        }
-        /*-------featured section end ------*/
-
-/* Footer Styles */
-.footer {
-    background-color: #333;
-    color: #fff;
-    padding: 50px 0;
-    font-family: 'Arial', sans-serif;
-    text-align: center;
+/* Hero Section */
+.banner {
     position: relative;
+    width: 100%;
+    height: 92vh;
+    overflow: hidden;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; 
+}
+
+.banner-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    text-shadow: 4px 4px 4px #1c1c1c;
+}
+
+.banner-content h1 {
+    font-size: 2.7rem;
+    margin-bottom: 10px;
+}
+
+.banner-content p {
+    font-size: 1.3rem;
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    color: #fff;
+    animation: bounce 2s infinite;
+    text-decoration: none;
+    z-index: 15;
+}
+
+.scroll-down:hover {
+    color: #ccc;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+/* Search Bar Section */
+.search {
+    text-align: center;
+    margin: 30px 0;
+    padding: 20px;
+}
+
+.search-bar h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.search-bar p {
+    margin-bottom: 20px;
+}
+
+.search-bar form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.search-bar input {
+    width: 60%;
+    max-width: 400px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #313131;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #363636;
+}
+
+/* Featured Sections */
+.featured-section {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.featured-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.farmers-container, .products-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.farmer-card, .product-card {
+    background: #f9f9f9;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 280px;
+}
+
+.farmer-card img, .product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.farmer-card h3, .product-card h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.farmer-card p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.product-card button {
+    margin-bottom: 10px;
+    padding: 8px 16px;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product-card button:hover {
+    background-color: #1c1c1c;
+}
+
+/* Footer */
+.footer {
+    background: #000000;
+    color: #fff;
+    text-align: center;
+    z-index: 5;
+    min-height: 100px;
 }
 
 .footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
     gap: 20px;
 }
 
 .footer-info {
-    flex: 2;
-    text-align: left;
-    padding-left: 20px;
-    margin-bottom: 30px;
+    max-width: 400px;
 }
 
-.footer-info h3 {
-    font-size: 20px;
-    margin-bottom: 15px;
-    font-weight: 600;
-}
-
-.footer-info p {
-    font-size: 14px;
-    margin-bottom: 5px;
-}
-
+/* contact form (footer) */
 .contact-form {
     flex: 3;
     padding: 0 20px;
@@ -266,10 +326,11 @@
     font-size: 14px;
 }
 
+/* Updated Button with Greenish and Black Gradient */
 .contact-form button {
     width: 100%;
     padding: 15px;
-    background: linear-gradient(45deg, #00bcd4, #8e44ad);
+    background: linear-gradient(45deg, #4caf50, #333); /* Green to Black gradient */
     border: none;
     border-radius: 5px;
     color: #fff;
@@ -280,64 +341,37 @@
 }
 
 .contact-form button:hover {
-    background: linear-gradient(45deg, #8e44ad, #00bcd4);
+    background: linear-gradient(45deg, #333, #4caf50); /* Reversed Gradient on Hover */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+
 .social-icons {
-    flex: 1;
-    text-align: right;
     display: flex;
-    flex-direction: column;
-    gap: 10px;
     justify-content: center;
-    align-items: flex-end;
+    gap: 10px;
 }
 
 .social-icon {
-    display: inline-block;
-    margin: 0 10px;
-    font-size: 28px;
     color: #fff;
-    text-decoration: none;
+    font-size: 1.2rem;
     transition: color 0.3s ease;
+    padding-bottom: 10px;
 }
 
 .social-icon:hover {
-    color: #55acee; /* Change this to your preferred hover color */
+    color: #000000;
 }
 
 .copyright {
+    font-size: 0.9rem;
+    padding: 1px 10px;
     background-color: #222;
-    padding: 20px;
-    text-align: center;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    margin-top: 30px;
-}
-
-.copyright p {
-    font-size: 14px;
-    margin: 0;
-    color: #aaa;
 }
 
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-info,
-    .contact-form,
-    .social-icons {
-        flex: none;
-        width: 100%;
         text-align: center;
-    }
-
-    .contact-form {
-        margin-bottom: 20px;
     }
 }
