@@ -14,10 +14,12 @@
 7.	Create a Pull Request: Navigate to this repository on GitHub, click “New Pull Request,” and follow the prompts.
 
 **What We Expect:**
+//
 •	Clarity: Make sure your code is well-documented with comments and follows consistent formatting.
 •	Efficiency: Algorithms should be optimized for performance, with explanations if needed.
 •	Readability: Ensure your code is easy to understand for other contributors or learners.
 •	Tested Code: Please test your contributions before submitting a Pull Request (PR).
+//
 
  **An App-based solution for the wool sector in India which can have the following features is required:** 
  1. Wool Market Information: Provides real-time market information on wool prices, trends, and news
