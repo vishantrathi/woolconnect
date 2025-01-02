@@ -1,85 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wool Product Catalog</title>
-    <link rel="stylesheet" href="catalog.css">
-</head>
-<body>
+    <link rel="stylesheet" href="catalog2.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body>
     <header>
-        <nav>
-            <div class="container">
-                <navbar>
-                    <div class="nav">
-                        <a href="#" class="logo"><img src="./images/DALL·E 2023-09-11 20.54.30 - Make exact like this image.png" alt="logo" height="50px" width="50px"></a>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact Doctor</a></li>
-                    <li><a href="#team">Team</a></li>
-                    <li><a href="Privacy policy.html">Privacy Policy</a></li>
-                    <li><a href="Trems and service.html">Terms and Services</a></li>
-            </ul>
-        </nav>
-    </header>
-        <div class="product-list">
-            <div class="product">
-                <img src="images/download.jpeg.jpg" alt="Wool Product 1" height="300px" width="300px">
-                <h3>Wool Product 1</h3>
-                <p>Price: ₹150.00</p>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="images/images.jpeg.jpg" alt="Wool Product 2" height="300px" width="300px">
-                <h3>Wool Product 2</h3>
-                <p>Price: ₹200.00</p>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="images/images (1).jpeg.jpg" alt="Wool Product 3" height="300px" width="300px">
-                <h3>Wool Product 3</h3>
-                <p>Price: ₹300.00</p>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="images/images (2).jpeg.jpg" alt="image" height="300px" width="300px">
-                <h3>Wool Product 4</h3>
-                <p>Price: 340.00</p>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="images/images (3).jpeg.jpg" alt="Wool Product 5" height="300px" width="300px">
-                <h3>Wool Product 5</h3>
-                <p>Price: ₹400.00</p>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="images/images (4).jpeg.jpg" alt="Wool Product 6" height="300px" width="300px">
-                <h3>Wool Product 6</h3>
-                <p>Price: ₹500.00</p>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="images/images (5).jpeg.jpg" alt="Wool Product 7" height="300px" width="300px">
-                <h3>Wool Product 7</h3>
-                <p>Price: ₹650.00</p>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="images/images (6).jpg" alt="Wool Product 8" height="300px" width="300px">
-                <h3>Wool Product 7</h3>
-                <p>Price: ₹500.00</p>
-                <button>Add to Cart</button>
-            </div>
-            </div>
+      <!-- Navbar Section -->
+      <nav class="navbar">
+        <div class="navcontainer">
+          <!-- Logo -->
+          <a href="#" class="logo">
+            <img
+              src="./images/DALL·E 2023-09-11 20.54.30 - Make exact like this image.png"
+              alt="logo"
+              height="50"
+              width="50"
+            />
+          </a>
 
-<script src="catalog.js"></script> <!-- Include the JavaScript file -->
+          <!-- Navbar Toggle Button for Mobile -->
+          <button class="nav-toggle" id="nav-toggle">☰</button>
+
+          <!-- Navbar Links -->
+          <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact Doctor</a></li>
+            <li><a href="demand.html">Demand</a></li>
+            <li><a href="Privacy policy.html">Privacy Policy</a></li>
+            <li><a href="Trems and service.html">Terms and Services</a></li>
+          </ul>
+
+          <!-- Additional Links -->
+          <div class="lastlink">
+            <ul>
+              <li><a href="Log in.html">Login</a></li>
+              <li><a href="signup.html">SignUp</a></li>
+            </ul>
+          </div>
         </div>
+      </nav>
+
+      <!-----navbar end-->
+    </header>
+    <div>
+      <div class="product-list">
+        <div class="product">
+          <div class="image-container">
+            <img src="images/download.jpeg.jpg" alt="Wool Product 1" />
+            <button>Add to Cart</button>
+          </div>
+          <div class="details">
+            <h3>Wool Product 1</h3>
+            <p>₹150.00</p>
+          </div>
+        </div>
+        <div class="product">
+          <div class="image-container">
+            <img src="images/images.jpeg.jpg" alt="Wool Product 2" />
+            <button>Add to Cart</button>
+          </div>
+          <div class="details">
+            <h3>Wool Product 2</h3>
+            <p>₹200.00</p>
+          </div>
+        </div>
+        <div class="product">
+          <div class="image-container">
+            <img src="images/images (1).jpeg.jpg" alt="Wool Product 3" />
+            <button>Add to Cart</button>
+          </div>
+          <div class="details">
+            <h3>Wool Product 3</h3>
+            <p>₹300.00</p>
+          </div>
+        </div>
+        <div class="product">
+          <div class="image-container">
+            <img src="images/images (2).jpeg.jpg" alt="Wool Product 4" />
+            <button>Add to Cart</button>
+          </div>
+          <div class="details">
+            <h3>Wool Product 4</h3>
+            <p>340.00</p>
+          </div>
+        </div>
+        <div class="product">
+          <div class="image-container">
+            <img src="images/images (3).jpeg.jpg" alt="Wool Product 5" />
+            <button>Add to Cart</button>
+          </div>
+          <div class="details">
+            <h3>Wool Product 5</h3>
+            <p>₹400.00</p>
+          </div>
+        </div>
+        <div class="product">
+          <div class="image-container">
+            <img src="images/images (4).jpeg.jpg" alt="Wool Product 6" />
+            <button>Add to Cart</button>
+          </div>
+          <div class="details">
+            <h3>Wool Product 6</h3>
+            <p>₹500.00</p>
+          </div>
+        </div>
+        <div class="product">
+          <div class="image-container">
+            <img src="images/images (5).jpeg.jpg" alt="Wool Product 7" />
+            <button>Add to Cart</button>
+          </div>
+          <div class="details">
+            <h3>Wool Product 7</h3>
+            <p>₹650.00</p>
+          </div>
+        </div>
+        <div class="product">
+          <div class="image-container">
+            <img src="images/images (6).jpg" alt="Wool Product 8" />
+            <button>Add to Cart</button>
+          </div>
+          <div class="details">
+            <h3>Wool Product 8</h3>
+            <p>₹500.00</p>
+          </div>
+        </div>
+        >
+      </div>
     </div>
 
-    <footer>
-        <p>&copy; 2023 Wool Connect</p>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-info">
+          <h2>Contact Us</h2>
+          <p>
+            If you have any questions or inquiries, feel free to reach out to
+            us.
+          </p>
+          <p>Email: contact@woolconnect.com</p>
+          <div class="social-icons">
+            <a href="#" class="social-icon"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <p>&copy; 2023 Wool Connect. All Rights Reserved.</p>
+      </div>
     </footer>
-</body>
+  </body>
+  <script>
+    const toggleButton = document.getElementById("nav-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    toggleButton.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  </script>
 </html>
