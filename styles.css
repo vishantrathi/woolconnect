@@ -20,9 +20,9 @@ body, html {
     justify-content: space-between;
     padding: 0 1%;
     margin: 0 auto;
-}
-
-.navbar {
+  }
+  
+  .navbar {
     background: linear-gradient(to right, #0f0f0f, #1b1b1b);
     display: flex;
     justify-content: space-between;
@@ -30,59 +30,82 @@ body, html {
     padding: 10px 10px;
     top: 0;
     z-index: 1000;
-}
-
-.logo img {
+  }
+  
+  .logo img {
     height: 50px;
     width: 50px;
     border-radius: 50%;
-}
-
-.nav-links {
+  }
+  
+  .nav-links {
     display: flex;
     gap: 50px;
     list-style: none;
-}
-
-.nav-links li a {
+    position: relative;
+  }
+  
+  .nav-links li {
+    position: relative;
+  }
+  
+  .nav-links li a {
     text-decoration: none;
     color: #fff;
     font-size: 16px;
     transition: color 0.3s ease;
-}
-
-.nav-links li a:hover {
+    position: relative;
+  }
+  
+  .nav-links li a::before {
+    content: "";
+    position: absolute;
+    border-radius: 15px;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2.5px;
+    background-color: #ee0653;
+    transition: all 0.5s;
+  }
+  
+  .nav-links li a:hover {
     color: #ccc;
-}
-
-.lastlink ul {
+  }
+  
+  .nav-links li a:hover::before {
+    width: 100%;
+  }
+  
+  .lastlink ul {
     display: flex;
     gap: 10px;
     list-style: none;
-}
-
-.lastlink a {
+  }
+  
+  .lastlink a {
     color: #fff;
     text-decoration: none;
     border: 1px solid #fff;
     padding: 5px 10px;
     border-radius: 5px;
-}
-
-.lastlink a:hover {
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .lastlink a:hover {
     background: #fff;
     color: #000000;
-}
-
-/* Mobile Navbar Toggle */
-.nav-toggle {
+  }
+  
+  /* Mobile Navbar Toggle */
+  .nav-toggle {
     display: none;
     font-size: 1.8rem;
     color: #fff;
     background: none;
     border: none;
     cursor: pointer;
-}
+  }
 
 @media (max-width: 1059px) {
     .nav-links, .lastlink {
@@ -310,7 +333,7 @@ body, html {
 }
 
 .social-icon:hover {
-    color: #000000;
+    color: #3e3636;
 }
 
 .copyright {
