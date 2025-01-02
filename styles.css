@@ -319,6 +319,56 @@ body, html {
     max-width: 400px;
 }
 
+/* contact form (footer) */
+.contact-form {
+    flex: 3;
+    padding: 0 20px;
+    background: #444;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.contact-form h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+}
+
+/* Updated Button with Greenish and Black Gradient */
+.contact-form button {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(45deg, #4caf50, #333); /* Green to Black gradient */
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: linear-gradient(45deg, #333, #4caf50); /* Reversed Gradient on Hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
 .social-icons {
     display: flex;
     justify-content: center;
