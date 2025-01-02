@@ -1,12 +1,12 @@
+Here is the single file that only includes the additions (blue lines) from the diff:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="images/DALL·E 2023-09-11 20.54.30 - Make exact like this image.png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wool Connect</title>
-</head>
     <link rel="stylesheet" href="./styles.css" />
     <link
       rel="stylesheet"
@@ -97,33 +97,6 @@
         </div>
       </section>
 
-      <!------search bar section complete----->
-
-      <section>
-        <div class="featured-section">
-          <h2>Featured Farmers</h2>
-          <div class="farmers-container">
-            <div class="farmer-card">
-              <img
-                src="./images/DALL·E 2023-09-11 21.09.54 - A indian farmer with his sheep .png"
-                alt="Featured Farmer 1"
-              />
-              <h3>JAI SINGH</h3>
-              <p>Location: KULLU</p>
-            </div>
-            <div class="farmer-card">
-              <img
-                src="./images/DALL·E 2023-09-11 21.14.10 - A phadi farmer with his sheep.png"
-                alt="Featured Farmer 2"
-              />
-              <h3>PRADEEP NEGI</h3>
-              <p>Location: SHIMLA</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!------Featured Farmers section end-------->
-
       <section class="featured-section">
         <h2>Featured Products</h2>
         <div class="products-container">
@@ -145,78 +118,47 @@
           </div>
         </div>
       </section>
-      <!------Featured Products section end-------->
 
-<footer>
-  <div class="footer-container">
-    <!-- Logo Section -->
-    <div class="footer-column logo-section">
-      <h2>Wool Connect</h2>
-      <p>
-        Wool Connect is an innovative platform dedicated to bridging the gap between wool producers, buyers, and enthusiasts worldwide. It fosters collaboration, promotes sustainable practices, and ensures transparency in the wool industry while supporting local communities and businesses.
-      </p>
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-info">
+            <h2>Contact Us</h2>
+            <p>
+              If you have any questions or inquiries, feel free to reach out to
+              us.
+            </p>
+            <p>Email: contact@woolconnect.com</p>
+            <div class="social-icons">
+              <a href="#" class="social-icon"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social-icon"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="social-icon"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="social-icon"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="copyright">
+          <p>&copy; 2023 Wool Connect. All Rights Reserved.</p>
+        </div>
+      </footer>
     </div>
 
-    <!-- Services Section -->
-    <div class="footer-column">
-      <h4>Our Service</h4>
-      <ul>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Our Work</a></li>
-        <li><a href="#">Pricing</a></li>
-        <li><a href="#">Help Center</a></li>
-        <li><a href="#">Login</a></li>
-      </ul>
-    </div>
+    <script>
+      const toggleButton = document.getElementById("nav-toggle");
+      const navLinks = document.getElementById("nav-links");
 
-    <!-- Company Section -->
-    <div class="footer-column">
-      <h4>Company</h4>
-      <ul>
-        <li><a href="#">Terms of Use</a></li>
-        <li><a href="#">Contact Us</a></li>
-      </ul>
-    </div>
-
-    <!-- Social Media Section -->
-    <div class="footer-column">
-      <h4>Follow Us</h4>
-      <ul>
-        <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
-        <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-        <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
-        <li><a href="#"><i class="fab fa-dribbble"></i> Dribbble</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- Contact Form -->
-  <div class="contact-form">
-    <h3>Send us a message</h3>
-    <form action="#" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </div>
-
-  <div class="footer-bottom">
-    <p>© 2025 Wool Connect - All Rights Reserved</p>
-  </div>
-</footer>
-
-<!-- Font Awesome -->
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
-    </div>
+      toggleButton.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+    </script>
   </body>
-  <script>
-    const toggleButton = document.getElementById("nav-toggle");
-    const navLinks = document.getElementById("nav-links");
-
-    toggleButton.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
-    });
-  </script>
 </html>
+```

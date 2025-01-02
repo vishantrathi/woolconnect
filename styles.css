@@ -1,9 +1,6 @@
 /* Global Styles */
 body, html {
-    margin: 0;
-    padding: 0;
     font-family: Arial, sans-serif;
-    box-sizing: border-box;
     scroll-behavior: smooth;
 }
 
@@ -35,11 +32,9 @@ body, html {
 .logo img {
     height: 50px;
     width: 50px;
-    border-radius: 50%;
 }
 
 .nav-links {
-    display: flex;
     gap: 50px;
     list-style: none;
 }
@@ -63,7 +58,6 @@ body, html {
 
 .lastlink a {
     color: #fff;
-    text-decoration: none;
     border: 1px solid #fff;
     padding: 5px 10px;
     border-radius: 5px;
@@ -115,7 +109,6 @@ body, html {
     height: 92vh;
     overflow: hidden;
     text-align: center;
-    color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -175,126 +168,150 @@ body, html {
     }
 }
 
-/* Shared Styles */
-.farmers-container, .products-container {
+/* Search Bar Section */
+.search {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.search-bar h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.search-bar p {
+    margin-bottom: 20px;
+}
+
+.search-bar form {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
-/* Farmers Section */
-.farmer-card {
-    width: 300px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.search-bar input {
+    width: 60%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-.farmer-card img {
-    max-width: 100%;
-    height: auto;
-    filter: grayscale(100%);
-}
-
-.farmer-card img:hover {
-    filter: grayscale(0%);
-}
-
-/* Products Section */
-.product-card {
-    width: 300px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.product-card img {
-    max-width: 100%;
-    height: auto;
-}
-
-.product-card input {
-    background-color: #21de21;
-    color: #333;
-    padding: 5px 10px;
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #313131;
+    color: #fff;
     border: none;
-    margin-top: 10px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-.product-card input:hover {
-    background-color: #333;
-    color: #fff;
+.search-bar button:hover {
+    background-color: #363636;
 }
 
-/* Footer Styles */
-footer {
-    background: linear-gradient(135deg, #f0f4f8, #d9e8fc);
-    color: #333;
-    padding: 40px 20px;
+/* Featured Sections */
+.featured-section {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.featured-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.farmers-container, .products-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.farmer-card, .product-card {
+    background: #f9f9f9;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 280px;
+}
+
+.farmer-card img, .product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.farmer-card h3, .product-card h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.farmer-card p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.product-card button {
+    margin-bottom: 10px;
+    padding: 8px 16px;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product-card button:hover {
+    background-color: #1c1c1c;
+}
+
+/* Footer */
+.footer {
+    background: #000000;
+    color: #fff;
+    z-index: 5;
+    min-height: 100px;
 }
 
 .footer-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
+    gap: 20px;
 }
 
-.footer-column {
-    flex: 1;
-    margin: 10px 15px;
-    min-width: 200px;
+.footer-info {
+    max-width: 400px;
 }
 
-.footer-column h4 {
-    font-size: 16px;
-    margin-bottom: 15px;
-    color: #4a90e2;
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
-.footer-column ul li a {
-    text-decoration: none;
-    color: #333;
+.social-icon {
+    font-size: 1.2rem;
+    color: #fff;
     transition: color 0.3s ease;
+    padding-bottom: 10px;
 }
 
-.footer-column ul li a:hover {
-    color: #4a90e2;
+.social-icon:hover {
+    color: #000000;
 }
 
-.contact-form {
-    background: #444;
-    border-radius: 10px;
-    padding: 30px;
-    color: #fff;
-}
-
-.contact-form button {
-    background: linear-gradient(45deg, #4caf50, #333);
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 15px;
-    cursor: pointer;
-}
-
-.contact-form button:hover {
-    background: linear-gradient(45deg, #333, #4caf50);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+.copyright {
+    font-size: 0.9rem;
+    padding: 1px 10px;
+    background-color: #222;
 }
 
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
+        text-align: center;
     }
 }
-
