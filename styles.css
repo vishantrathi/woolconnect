@@ -175,203 +175,126 @@ body, html {
     }
 }
 
-/* Search Bar Section */
-.search {
-    text-align: center;
-    margin: 30px 0;
-    padding: 20px;
-}
-
-.search-bar h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-.search-bar p {
-    margin-bottom: 20px;
-}
-
-.search-bar form {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.search-bar input {
-    width: 60%;
-    max-width: 400px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.search-bar button {
-    padding: 10px 20px;
-    background-color: #313131;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.search-bar button:hover {
-    background-color: #363636;
-}
-
-/* Featured Sections */
-.featured-section {
-    text-align: center;
-    margin: 50px 0;
-}
-
-.featured-section h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
+/* Shared Styles */
 .farmers-container, .products-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap;
 }
 
-.farmer-card, .product-card {
-    background: #f9f9f9;
+/* Farmers Section */
+.farmer-card {
+    width: 300px;
+    background-color: #fff;
+    border: 1px solid #ddd;
     border-radius: 10px;
-    overflow: hidden;
+    padding: 20px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 280px;
 }
 
-.farmer-card img, .product-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+.farmer-card img {
+    max-width: 100%;
+    height: auto;
+    filter: grayscale(100%);
 }
 
-.farmer-card h3, .product-card h3 {
-    font-size: 1.2rem;
-    margin: 10px 0;
+.farmer-card img:hover {
+    filter: grayscale(0%);
 }
 
-.farmer-card p {
-    font-size: 0.9rem;
-    margin-bottom: 10px;
+/* Products Section */
+.product-card {
+    width: 300px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.product-card button {
-    margin-bottom: 10px;
-    padding: 8px 16px;
-    background-color: #000000;
-    color: #fff;
+.product-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-card input {
+    background-color: #21de21;
+    color: #333;
+    padding: 5px 10px;
     border: none;
-    border-radius: 5px;
+    margin-top: 10px;
     cursor: pointer;
 }
 
-.product-card button:hover {
-    background-color: #1c1c1c;
+.product-card input:hover {
+    background-color: #333;
+    color: #fff;
 }
 
-/* Footer */
-.footer {
-    background: #000000;
-    color: #fff;
-    text-align: center;
-    z-index: 5;
-    min-height: 100px;
+/* Footer Styles */
+footer {
+    background: linear-gradient(135deg, #f0f4f8, #d9e8fc);
+    color: #333;
+    padding: 40px 20px;
 }
 
 .footer-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
-    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.footer-info {
-    max-width: 400px;
+.footer-column {
+    flex: 1;
+    margin: 10px 15px;
+    min-width: 200px;
 }
 
-/* contact form (footer) */
+.footer-column h4 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #4a90e2;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #4a90e2;
+}
+
 .contact-form {
-    flex: 3;
-    padding: 0 20px;
     background: #444;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 30px;
-    margin-bottom: 30px;
-}
-
-.contact-form h3 {
-    font-size: 22px;
-    margin-bottom: 20px;
-    font-weight: 600;
     color: #fff;
 }
 
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #555;
-    border-radius: 5px;
-    background-color: #333;
-    color: #fff;
-    font-size: 14px;
-}
-
-/* Updated Button with Greenish and Black Gradient */
 .contact-form button {
-    width: 100%;
-    padding: 15px;
-    background: linear-gradient(45deg, #4caf50, #333); /* Green to Black gradient */
+    background: linear-gradient(45deg, #4caf50, #333);
+    color: #fff;
     border: none;
     border-radius: 5px;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 500;
+    padding: 15px;
     cursor: pointer;
-    transition: all 0.3s ease;
 }
 
 .contact-form button:hover {
-    background: linear-gradient(45deg, #333, #4caf50); /* Reversed Gradient on Hover */
+    background: linear-gradient(45deg, #333, #4caf50);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-.social-icon {
-    color: #fff;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
-    padding-bottom: 10px;
-}
-
-.social-icon:hover {
-    color: #000000;
-}
-
-.copyright {
-    font-size: 0.9rem;
-    padding: 1px 10px;
-    background-color: #222;
 }
 
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
-        text-align: center;
     }
 }
+
