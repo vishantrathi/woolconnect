@@ -1,6 +1,9 @@
 /* Global Styles */
 body, html {
+    margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
+    box-sizing: border-box;
     scroll-behavior: smooth;
 }
 
@@ -32,9 +35,11 @@ body, html {
 .logo img {
     height: 50px;
     width: 50px;
+    border-radius: 50%;
 }
 
 .nav-links {
+    display: flex;
     gap: 50px;
     list-style: none;
 }
@@ -58,6 +63,7 @@ body, html {
 
 .lastlink a {
     color: #fff;
+    text-decoration: none;
     border: 1px solid #fff;
     padding: 5px 10px;
     border-radius: 5px;
@@ -109,6 +115,7 @@ body, html {
     height: 92vh;
     overflow: hidden;
     text-align: center;
+    color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -172,6 +179,7 @@ body, html {
 .search {
     text-align: center;
     margin: 30px 0;
+    padding: 20px;
 }
 
 .search-bar h2 {
@@ -193,6 +201,7 @@ body, html {
 .search-bar input {
     width: 60%;
     max-width: 400px;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
@@ -271,6 +280,7 @@ body, html {
 .footer {
     background: #000000;
     color: #fff;
+    text-align: center;
     z-index: 5;
     min-height: 100px;
 }
@@ -293,8 +303,8 @@ body, html {
 }
 
 .social-icon {
-    font-size: 1.2rem;
     color: #fff;
+    font-size: 1.2rem;
     transition: color 0.3s ease;
     padding-bottom: 10px;
 }
