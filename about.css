@@ -1,138 +1,109 @@
-*{
+body, html {
     margin: 0;
     padding: 0;
-box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+.container {
+    width: 100%;
+    margin: 0 auto;
 }
 
-.container{
-    max-width: 1540px;
+/* Navbar */
+.navcontainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1%;
+    margin: 0 auto;
 }
-.logo{
-    padding-top: 10px;
+
+.navbar {
+    background: linear-gradient(to right, #0f0f0f, #1b1b1b);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    top: 0;
+    z-index: 1000;
 }
-.logo img{
+
+.logo img {
+    height: 50px;
+    width: 50px;
     border-radius: 50%;
 }
-.nav ul{
+
+.nav-links {
     display: flex;
-    gap: 20px;
-    padding-top: 15px;
+    gap: 50px;
+    list-style: none;
 }
-.nav ul li{
-    list-style-type: none;
-}
-.nav ul li a{
+
+.nav-links li a {
     text-decoration: none;
     color: #fff;
-    font-size: 20px;
-    font-weight: 400;
-}
-.nav >a{
-    padding-right: 30px;
-}
-.nav ul li a:hover{
-    color: #333;
-    background-color: #fff;
-    padding:5px 5px;
-}
-.lastlink{
-padding-left: 550px;
-
-/* Container Styles */
-.container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+    font-size: 16px;
+    transition: color 0.3s ease;
 }
 
-/* About Page Styles */
-h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+.nav-links li a:hover {
+    color: #ccc;
 }
 
-h2 {
-    font-size: 1.5rem;
-    margin-top: 20px;
-    color: #007bff; /* Change the color as needed */
+.about-section {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
-p {
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #333;
-    margin-bottom: 20px;
+.mission-section {
+    width: 100%;
+    height: 200px;
+    margin: 20px 0;
+    padding: 30px;
+    background-color: #fffacd; /* Light yellow shade */
 }
 
-/* Footer Styles */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-
-/* Global Styles */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    margin: 0;
-    padding: 0;
+.history-section {
+    width: 100%;
+    height: 200px;
+    margin: 20px 0;
+    padding: 30px;
+    background-color: #fff8dc; /* Light yellow shade */
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
+.team-section {
+    width: 100%;
+    height: 200px;
+    margin: 20px 0;
+    padding: 30px;
+    background-color: #fafad2; /* Light yellow shade */
 }
 
-nav ul {
-    list-style-type: none;
+.story-section {
+    width: 100%;
+    height: 200px;
+    margin: 20px 0;
+    padding: 30px;
+    background-color: #ffffe0; /* Light yellow shade */
+}
+.text-align-left {
+    text-align: left;
+}
+
+.text-align-center {
     text-align: center;
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
+.text-align-right {
+    text-align: right;
 }
 
-nav a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-}
-
-/* Container Styles */
-.container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* About Page Styles */
-h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-h2 {
-    font-size: 1.5rem;
-    margin-top: 20px;
-}
-
-p {
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-/* Footer Styles */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
+.text-align-justify {
+    text-align: justify;
 }
