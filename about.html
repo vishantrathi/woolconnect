@@ -5,6 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us</title>
   <link rel="stylesheet" href="about.css">
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    /* CSS for Scroll to Top Button */
+  #scrollBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  pointer-events: auto;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#scrollBtn:hover {
+  background-color: #0056b3;
+  transform: scale(1.2);
+}
+
+  </style>
 </head>
 <body>
   <div class="container">
@@ -20,16 +57,18 @@
             width="50"
           />
         </a>
-
-          <!-- Navbar Links -->
-          <ul class="nav-links" id="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="contact.html">Contact Doctor</a></li>
-            <li><a href="demand.html">Demand</a></li>
-            <li><a href="Privacy policy.html">Privacy Policy</a></li>
-            <li><a href="Trems and service.html">Terms and Services</a></li>
-          </ul>
-     </div>
+        <button id="scrollBtn" title="Go to top">
+          <i class="fa-solid fa-arrow-up fa-lg"></i>
+        </button>
+        <!-- Navbar Links -->
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="contact.html">Contact Doctor</a></li>
+          <li><a href="demand.html">Demand</a></li>
+          <li><a href="Privacy policy.html">Privacy Policy</a></li>
+          <li><a href="Trems and service.html">Terms and Services</a></li>
+        </ul>
+      </div>
     </nav>
   </div>  
   <header>
@@ -39,7 +78,7 @@
     <section class="about-section">
       <section class="mission-section">
         <h2 style="text-align: center; margin-bottom: 10px;">Our Mission</h2>
-        <p style="text-align: center; font-size: 18px;">At WoolConnect, our mission is to connect wool enthusiasts from around the world and provide them with the best resources and community support. We strive to create a platform where wool lovers can share their knowledge, experiences, and passion for wool. Our goal is to foster a supportive and inclusive community that encourages learning and growth. We believe in the power of community and the importance of preserving the art of wool crafting. Our mission is to ensure that this tradition continues to thrive in the modern world. Through our platform, we aim to provide educational resources, tutorials, and events that cater to both beginners and experienced wool crafters. We are committed to sustainability and ethical practices in the wool industry, and we strive to promote these values within our community.</p>
+        <p style="text-align: center; font-size: 18px;">At WoolConnect, our mission is to connect wool enthusiasts from around the world and provide them with the best resources and community support. We strive to create a platform where wool lovers can share their knowledge, experiences, and passion for wool. Our goal is to foster a supportive and inclusive community that encourages learning and growth. We believe in the power of community and the importance of preserving the art of wool crafting. Our mission is to ensure that this tradition continues to thrive in the modern world. Through our platform, we aim to provide educational resources, tutorials, and events that cater to both beginners and experienced wool crafters. We are committed to sustainability and ethical practices in the wool industry, and we strive to promote these values within our community</p>
       </section>
       <section class="history-section">
         <h2 style="text-align: center; margin-bottom: 10px;">Our History</h2>
@@ -54,11 +93,34 @@
         <p style="text-align: center; font-size: 18px;">Through hard work and dedication, we have achieved numerous milestones and have been recognized as a leading platform for wool enthusiasts. Our success is a testament to the strength and passion of our community. Our journey has been filled with challenges and triumphs, and we are proud of what we have accomplished together as a community. We have hosted numerous events, workshops, and tutorials that have brought wool enthusiasts together and fostered a sense of camaraderie. Our platform has been featured in various publications and has received accolades for its contributions to the wool crafting community. We are grateful for the support of our members and are excited to continue growing and evolving as a leading platform for wool enthusiasts.</p>
       </section>
     </section>
-
+    <!-- Scroll Down Link -->
   </main>
 
   <footer>
     <p style="text-align: center;">&copy; 2023 WoolConnect. All rights reserved.</p>
   </footer>
+
+  <script>
+    // Get the button element
+    const scrollBtn = document.getElementById('scrollBtn');
+
+    // Show the button when the user scrolls down 100px from the top
+    window.onscroll = function () {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+          scrollBtn.style.display = "block";
+      } else {
+          scrollBtn.style.display = "none";
+      }
+    };
+
+    // Scroll to the top of the page when the button is clicked
+    scrollBtn.onclick = function () {
+      window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+      });
+    };
+
+  </script>
 </body>
 </html>
