@@ -5,9 +5,11 @@ body, html {
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+
 .container {
     width: 100%;
     margin: 0 auto;
+    
 }
 
 /* Navbar */
@@ -53,45 +55,140 @@ body, html {
     color: #ccc;
 }
 
+/* General Section Styles */
 .about-section {
-    width: 100%;
-    height: 60%;
+    width: 99%;
+    height: auto; 
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 28px;
+    padding: 40px 0;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); 
+    background-color: #b2b8b8; 
+    animation: fadeInUp 0.5s ease-out forwards; 
+    border-radius: 12px; 
 }
 
-.mission-section {
-    width: 100%;
-    height: 200px;
+.mission-section,
+.history-section,
+.team-section,
+.story-section {
+    width: 97%;
     margin: 20px 0;
     padding: 30px;
-    background-color: #fffacd; /* Light yellow shade */
+    background-color: #fffacd; 
+    border-radius: 10px; 
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15); 
+    transition: box-shadow 0.3s ease, transform 0.3s ease; 
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+/* Background colors for individual sections */
+.mission-section {
+    background-color: #fffacd; 
 }
 
 .history-section {
-    width: 100%;
-    height: 200px;
-    margin: 20px 0;
-    padding: 30px;
-    background-color: #fff8dc; /* Light yellow shade */
+    background-color: #fff8dc; 
 }
 
 .team-section {
-    width: 100%;
-    height: 200px;
-    margin: 20px 0;
-    padding: 30px;
-    background-color: #fafad2; /* Light yellow shade */
+    background-color: #fafad2; 
 }
 
 .story-section {
-    width: 100%;
-    height: 200px;
-    margin: 20px 0;
-    padding: 30px;
-    background-color: #ffffe0; /* Light yellow shade */
+    background-color: #ffffe0; 
 }
+
+/* Hover Effects */
+.mission-section:hover,
+.history-section:hover,
+.team-section:hover,
+.story-section:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); 
+    transform: translateY(-5px); 
+}
+
+/* Fade-In Animation for Sections */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Start from slightly below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End in original position */
+    }
+}
+
+/* Typewriter effect for multiline text inside sections */
+.mission-section p,
+.history-section p,
+.team-section p,
+.story-section p {
+    display: block; 
+    font-family: "Courier New", Courier, monospace; 
+    font-size: 1.2em;
+    font-weight: bold; /* Bold text */
+    color: #333;
+    overflow: hidden; /* Hide overflowing text */
+    white-space: normal; /* Allow text to wrap to the next line */
+    position: relative; /* Required for pseudo-element positioning */
+    animation: none; /* Disable animation directly on the paragraph */
+}
+
+/* Multiline typewriter animation using a pseudo-element */
+.mission-section p::before,
+.history-section p::before,
+.team-section p::before,
+.story-section p::before {
+    content: ""; /* Empty content to simulate typing */
+    position: absolute;
+    background: white; /* Background color matches section background */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: typewriter-multiline 4s steps(50, end) forwards; /* Adjust duration and steps */
+}
+
+/* Multiline typewriter keyframes */
+@keyframes typewriter-multiline {
+    from {
+        width: 100%; /* Start with full overlay */
+    }
+    to {
+        width: 0%; /* Reveal content gradually */
+    }
+}
+
+/* Blinking cursor animation */
+@keyframes blink {
+    from {
+        border-right-color: #333;
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+
+/* Optional: text fade-in animation for smooth loading */
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.mission-section, .history-section, .team-section, .story-section {
+    animation: fadeInText 1s ease-out;
+}
+
+
+
+
 .text-align-left {
     text-align: left;
 }
