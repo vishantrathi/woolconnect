@@ -1,5 +1,5 @@
 // Regular expression for name validation
-const nameRegex = /^[A-Za-z\s-]{4,50}$/;
+const nameRegex = /^[A-Za-z\s-]{2,50}$/;
 
 // Function to validate input fields
 function validateNameField(inputField, fieldName) {
@@ -23,8 +23,8 @@ function validateNameField(inputField, fieldName) {
     errorDiv.textContent = `${fieldName} is required.`;
     inputField.style.borderColor = "red";
     return false;
-  } else if (value.length < 4) {
-    errorDiv.textContent = `${fieldName} must be at least 4 characters long.`;
+  } else if (value.length < 2) {
+    errorDiv.textContent = `${fieldName} must be at least 2 characters long.`;
     inputField.style.borderColor = "red";
     return false;
   } else if (value.length > 50) {
