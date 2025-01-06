@@ -6,24 +6,44 @@
     <title>Wool Demand</title>
     <link rel="stylesheet" href="demand.css"> <!-- Add your CSS file -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="navbar.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <navbar>
-                <div class="nav">
-                    <a href="#" class="logo"><img src="./images/DALL·E 2023-09-11 20.54.30 - Make exact like this image.png" alt="logo" height="50px" width="50px"></a>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="contact.html">Contact Doctor</a></li>
-                        <li><a href="#team">Demand</a></li>
-                        <li><a href="Privacy policy.html">Privacy Policy</a></li>
-                        <li><a href="Trems and service.html">Terms and Services</a></li>
-        <!-- ... (navigation links) ... -->
-    </header>
-    
     <div class="container">
+        <!-- Navbar Section -->
+        <nav class="navbar" style="position: fixed; top: 0; width: 100%; left: 50%; transform: translateX(-50%);">
+            <div class="navcontainer">
+                <!-- Logo -->
+                <a href="#" class="logo">
+                    <img src="./images/DALL·E 2023-09-11 20.54.30 - Make exact like this image.png" alt="logo" height="50" width="50" />
+                </a>
+
+                <!-- Login and SignUp Buttons -->
+                <div class="auth-buttons" style="display: flex; gap: 10px; margin-left: 20px;">
+                    <a href="Log in.html" class="auth-button">Login</a>
+                    <a href="signup.html" class="auth-button">SignUp</a>
+                </div>
+
+                <button id="scrollBtn" title="Go to top">
+                    <i class="fa-solid fa-arrow-up fa-lg"></i>
+                </button>
+
+                <!-- Navbar Toggle Button for Mobile -->
+                <button class="nav-toggle" id="nav-toggle">☰</button>
+
+                <!-- Navbar Links -->
+                <ul class="nav-links" id="nav-links" style="margin-left: auto;">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact Doctor</a></li>
+                    <li><a href="demand.html" class="active">Demand</a></li>
+                    <li><a href="Privacy policy.html">Privacy Policy</a></li>
+                    <li><a href="Trems and service.html">Terms and Services</a></li>
+                    <li><a href="contributors/contributor.html">Contributors</a></li>
+                </ul>
+            </div>
+        </nav>
+        <br><br><br><br><br>
         <h1>Wool Demand</h1>
         <p>Enter your requirements to buy bulk wool:</p>
 
@@ -52,5 +72,34 @@
     </footer>
 
     <script src="demand.js"></script> <!-- Add your JavaScript file -->
+    <script>
+        const toggleButton = document.getElementById("nav-toggle");
+        const navLinks = document.getElementById("nav-links");
+
+        toggleButton.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+    </script>
+    <script>
+        // Get the button element
+        const scrollBtn = document.getElementById('scrollBtn');
+
+        // Show the button when the user scrolls down 20px from the top
+        window.onscroll = function () {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollBtn.style.display = "block";
+            } else {
+                scrollBtn.style.display = "none";
+            }
+        };
+
+        // Scroll to the top of the page when the button is clicked
+        scrollBtn.onclick = function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        };
+    </script>
 </body>
 </html>

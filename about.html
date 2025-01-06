@@ -18,6 +18,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="navbar.css">
   <style>
     /* CSS for Scroll to Top Button */
   #scrollBtn {
@@ -58,16 +59,29 @@
             width="50"
           />
         </a>
+
+        <!-- Login and SignUp Buttons -->
+        <div class="auth-buttons" style="display: flex; gap: 10px; margin-left: 20px;">
+          <a href="Log in.html" class="auth-button">Login</a>
+          <a href="signup.html" class="auth-button">SignUp</a>
+        </div>
+
         <button id="scrollBtn" title="Go to top">
           <i class="fa-solid fa-arrow-up fa-lg"></i>
         </button>
+
+        <!-- Navbar Toggle Button for Mobile -->
+        <button class="nav-toggle" id="nav-toggle">☰</button>
+
         <!-- Navbar Links -->
-        <ul class="nav-links" id="nav-links">
+        <ul class="nav-links" id="nav-links" style="margin-left: auto;">
           <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
           <li><a href="contact.html">Contact Doctor</a></li>
           <li><a href="demand.html">Demand</a></li>
           <li><a href="Privacy policy.html">Privacy Policy</a></li>
           <li><a href="Trems and service.html">Terms and Services</a></li>
+          <li><a href="contributors/contributor.html">Contributors</a></li>
         </ul>
       </div>
     </nav>
@@ -102,26 +116,33 @@
   </footer>
 
   <script>
+    const toggleButton = document.getElementById("nav-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    toggleButton.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  </script>
+  <script>
     // Get the button element
     const scrollBtn = document.getElementById('scrollBtn');
 
-    // Show the button when the user scrolls down 100px from the top
+    // Show the button when the user scrolls down 20px from the top
     window.onscroll = function () {
-      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-          scrollBtn.style.display = "block";
-      } else {
-          scrollBtn.style.display = "none";
-      }
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollBtn.style.display = "block";
+        } else {
+            scrollBtn.style.display = "none";
+        }
     };
 
     // Scroll to the top of the page when the button is clicked
     scrollBtn.onclick = function () {
-      window.scrollTo({
-          top: 0,
-          behavior: "smooth"
-      });
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
     };
-
   </script>
 </body>
 </html>

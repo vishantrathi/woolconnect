@@ -404,3 +404,17 @@ body, html {
 #scrollBtn:hover i {
     transform: scale(1.2); /* Slightly enlarges the icon */
 }
+
+.auth-button {
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+}
+
+.auth-button:hover {
+    background: #fff;
+    color: #000000;
+}
