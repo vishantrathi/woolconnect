@@ -1,0 +1,116 @@
+.navcontainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1%;
+    margin: 0 auto;
+}
+
+.navbar {
+    background: linear-gradient(to right, #0f0f0f, #1b1b1b);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.nav-links {
+    display: flex;
+    gap: 50px;
+    list-style: none;
+    position: relative;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-links li a::before {
+    content: "";
+    position: absolute;
+    border-radius: 15px;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2.5px;
+    background-color: #ee0653;
+    transition: all 0.5s;
+}
+
+.nav-links li a:hover {
+    color: #ccc;
+}
+
+.nav-links li a:hover::before {
+    width: 100%;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+    margin-left: 20px;
+}
+
+.auth-button {
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+}
+
+.auth-button:hover {
+    background: #fff;
+    color: #000000;
+}
+
+.nav-toggle {
+    display: none;
+    font-size: 1.8rem;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 1059px) {
+    .nav-links, .auth-buttons {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        gap: 20px;
+        background: rgba(35, 35, 35, 0.95);
+        text-align: center;
+        padding: 20px;
+        z-index: 1001;
+    }
+
+    .nav-links.active, .auth-buttons.active {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+}
