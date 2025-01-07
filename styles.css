@@ -845,7 +845,6 @@ html {
 #scrollBtn:hover i {
 add-carousel-and-scrollable-content
   transform: scale(1.2); /* Slightly enlarges the icon */
-}
     transform: scale(1.2); /* Slightly enlarges the icon */
 }
 
@@ -862,4 +861,4 @@ add-carousel-and-scrollable-content
     background: #fff;
     color: #000000;
 }
- main
+ main{}
