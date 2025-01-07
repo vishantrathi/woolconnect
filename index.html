@@ -42,9 +42,6 @@
             <a href="signup.html" class="auth-button">SignUp</a>
           </div>
 
-          <button id="scrollBtn" title="Go to top">
-            <i class="fa-solid fa-arrow-up fa-lg"></i>
-          </button>
 
           <!-- Navbar Toggle Button for Mobile -->
           <button class="nav-toggle" id="nav-toggle">☰</button>
@@ -349,6 +346,9 @@
         </div>
       </footer>
     </div>
+    <button id="scrollBtn" title="Go to top">
+      <i class="fa-solid fa-arrow-up fa-lg"></i>
+    </button>
 
     <script>
       const toggleButton = document.getElementById("nav-toggle");
@@ -357,8 +357,7 @@
       toggleButton.addEventListener("click", () => {
         navLinks.classList.toggle("active");
       });
-    </script>
-    <script>
+
       // Get the button element
       const scrollBtn = document.getElementById("scrollBtn");
 

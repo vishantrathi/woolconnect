@@ -7,6 +7,18 @@
     <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="navbar.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container">
@@ -74,7 +86,7 @@
                     <textarea id="problem" name="problem" rows="6" required placeholder="Please describe your problem here..."></textarea>
                 </div>
                 <div class="form-group">
-                    <button type="submit">Submit</button>
+                    <button class="submit" type="submit">Submit</button>
                 </div>
             </form>
         </main>
@@ -84,6 +96,10 @@
         </footer>
     </div>
 
+    <button id="scrollBtn" title="Go to top">
+      <i class="fa-solid fa-arrow-up fa-lg"></i>
+    </button>
+
     <script>
         const toggleButton = document.getElementById("nav-toggle");
         const navLinks = document.getElementById("nav-links");
@@ -91,8 +107,7 @@
         toggleButton.addEventListener("click", () => {
             navLinks.classList.toggle("active");
         });
-    </script>
-    <script>
+
         // Get the button element
         const scrollBtn = document.getElementById('scrollBtn');
 
