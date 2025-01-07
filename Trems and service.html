@@ -7,6 +7,19 @@
     <link rel="stylesheet" href="TREMS AND SERVICE.CSS">
     <link rel="stylesheet" href="navbar.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="navbar.css">
 </head>
 <body>
     <div class="container">
@@ -19,9 +32,7 @@
                     <a href="Log in.html" class="auth-button">Login</a>
                     <a href="signup.html" class="auth-button">SignUp</a>
                 </div>
-                <button id="scrollBtn" title="Go to top">
-                    <i class="fa-solid fa-arrow-up fa-lg"></i>
-                </button>
+           
                 <button class="nav-toggle" id="nav-toggle">☰</button>
                 <ul class="nav-links" id="nav-links" style="margin-left: auto;">
                     <li><a href="index.html">Home</a></li>
@@ -68,6 +79,11 @@
         <footer>
             <p>&copy; 2023 Wool Connect. All Rights Reserved</p>
         </footer>
+
+        <button id="scrollBtn" title="Go to top">
+            <i class="fa-solid fa-arrow-up fa-lg"></i>
+        </button>
+
     </div>
     <script>
         const toggleButton = document.getElementById("nav-toggle");
@@ -76,8 +92,7 @@
         toggleButton.addEventListener("click", () => {
             navLinks.classList.toggle("active");
         });
-    </script>
-    <script>
+
         const scrollBtn = document.getElementById('scrollBtn');
 
         window.onscroll = function () {

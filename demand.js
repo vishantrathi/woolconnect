@@ -18,3 +18,30 @@ demandForm.addEventListener("submit", function (e) {
         popup.style.display = "none";
     });
 });
+
+const toggleButton = document.getElementById("nav-toggle");
+const navLinks = document.getElementById("nav-links");
+
+toggleButton.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+
+// Get the button element
+const scrollBtn = document.getElementById('scrollBtn');
+
+// Show the button when the user scrolls down 20px from the top
+window.onscroll = function () {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollBtn.style.display = "block";
+    } else {
+        scrollBtn.style.display = "none";
+    }
+};
+
+// Scroll to the top of the page when the button is clicked
+scrollBtn.onclick = function () {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+};
