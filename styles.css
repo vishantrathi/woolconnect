@@ -15,7 +15,6 @@ html {
 
 /* Navbar */
 .navcontainer {
-<<<<<<< Updated upstream
   width: 100%;
   display: flex;
   align-items: center;
@@ -114,53 +113,7 @@ html {
   .lastlink {
     display: none;
     flex-direction: column;
-=======
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 1%;
-    margin: 0 auto;
-  }
-  
-  .navbar {
-    background: linear-gradient(to right, #0f0f0f, #1b1b1b);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 10px;
-    top: 0;
-    z-index: 1000;
-  }
-  
-  .logo img {
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-  }
-  
-  .nav-links {
-    display: flex;
-    gap: 50px;
-    list-style: none;
-}
-
-.nav-links li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 16px;
-    transition: color 0.3s ease;
-    position: relative;
-  }
-  
-  .nav-links li a::before {
-    content: "";
->>>>>>> Stashed changes
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-    gap: 20px;
     background: rgba(35, 35, 35, 0.95);
     text-align: center;
     padding: 20px;
@@ -352,7 +305,8 @@ html {
 .product-card button:hover {
   background-color: #1c1c1c;
 }
-/* !XXXXXXXXXXXXXXXXXXXXXXXX */
+
+/* Carousel Container */
 .carousel-container {
   display: flex;
   justify-content: center;
@@ -419,7 +373,6 @@ html {
 .carousel-buttons button:hover {
   background-color: #2563eb;
 }
-
 
 /* TODO: STYLING FOR NEW SECTIONS AND CAROUSELS */
 
@@ -627,8 +580,8 @@ html {
   font-weight: bold;
   margin: 5px 0;
 }
-/*!   X - BANNER */
 
+/*!   X - BANNER */
 
 /* Wrapper for the banner */
 .x-banner-wrapper {
@@ -715,7 +668,8 @@ html {
   background-color: #e50019;
 }
 
-/*! PRODUCT_GALLER THE END */
+/*! PRODUCT_GALLERY THE END */
+
 /* Animations */
 @keyframes fadeIn {
   from {
@@ -741,6 +695,7 @@ html {
 }
 
 /* TODO: THE_END */
+
 /* Footer */
 .footer {
   background: #000000;
@@ -759,29 +714,6 @@ html {
 
 .footer-info {
   max-width: 400px;
-}
-
-.social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-
-.social-icon {
-  color: #fff;
-  font-size: 1.2rem;
-  transition: color 0.3s ease;
-  padding-bottom: 10px;
-}
-
-.social-icon:hover {
-  color: #000000;
-}
-
-.copyright {
-  font-size: 0.9rem;
-  padding: 1px 10px;
-  background-color: #222;
 }
 
 .social-icons {
@@ -843,22 +775,21 @@ html {
 }
 
 #scrollBtn:hover i {
-add-carousel-and-scrollable-content
   transform: scale(1.2); /* Slightly enlarges the icon */
-    transform: scale(1.2); /* Slightly enlarges the icon */
 }
 
 .auth-button {
-    color: #fff;
-    text-decoration: none;
-    border: 1px solid #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: all 0.5s ease-in-out;
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
 }
 
 .auth-button:hover {
-    background: #fff;
-    color: #000000;
+  background: #fff;
+  color: #000000;
 }
- main{}
+
+main {}
