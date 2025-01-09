@@ -92,23 +92,5 @@ To get started with the project, follow these steps:
 
 ---
 
-<h3>Project Contributers: <h3>
-<a href="https://github.com/vishantrathi/woolconnect/graphs/contributors">
-<img src="https://contributors-img.web.app/image?repo=vishantrathi/woolconnect"/>
-
-<h3>Repo Stared By:<h3>
-<div align='center'>
-
-[![Stargazers repo roster for @vishantrathi/woolconnect](https://reporoster.com/stars/vishantrathi/woolconnect)](https://github.com/vishantrathi/woolconnect/stargazers)
-
-</div>
-
-<h3>Repo Forked By:<h3>
-
-<div align='center'>
-
-[![Forkers repo roster for @vishantrathi/woolconnect](https://reporoster.com/forks/vishantrathi/woolconnect)](https://github.com/vishantrathi/woolconnect/network/members)
-
----
 
 Thank you for your interest in contributing to **WoolConnect**! 🧡 We appreciate your help in making this platform better for the wool community in India.
