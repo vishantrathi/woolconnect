@@ -342,7 +342,7 @@
         </div>
 
         <div class="copyright">
-          <p>&copy; 2023 Wool Connect. All Rights Reserved.</p>
+          <p>&copy; <span id="ThisYear"></span> Wool Connect. All Rights Reserved.</p>
         </div>
       </footer>
     </div>
@@ -350,6 +350,9 @@
       <i class="fa-solid fa-arrow-up fa-lg"></i>
     </button>
     <script src="index.js"></script>
-   
+   <script>
+   const currentYear= new Date().getFullYear();
+     document.getElementById('ThisYear').textContent = currentYear;
+   </script>
   </body>
 </html>
