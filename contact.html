@@ -61,16 +61,19 @@
                 <div class="form-group">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
+                    <div class="tooltip">Please enter your full name here.</div> 
                 </div>
 
                 <div class="form-group">
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required>
+                    <div class="tooltip">Please enter a valid email like example@mail.com.</div>
                 </div>
 
                 <div class="form-group">
                     <label for="phone">Phone Number:</label>
                     <input type="tel" id="phone" name="phone" required>
+                    <div class="tooltip">Please enter your phone number(10 digits).</div>
                 </div>
 
                 <div class="form-group">
@@ -80,10 +83,12 @@
                         <option value="male">Male</option>
                         <option value="female">Female</option>
                     </select>
+                    <div class="tooltip">Please select your Gender here.</div>
                 </div>
 
                 <div class="form-group">
                     <textarea id="problem" name="problem" rows="6" required placeholder="Please describe your problem here..."></textarea>
+                    <div class="tooltip">Feel free to describe your message in detail.</div>
                 </div>
                 <div class="form-group">
                     <button class="submit" type="submit">Submit</button>
