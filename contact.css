@@ -106,6 +106,30 @@ textarea {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Darker shadow on click */
 }
 
+/* adding tooltips */
+.tooltip {
+    visibility: hidden;
+    background: linear-gradient(90deg, #6a0572, #a40606);
+    color: #fff;    
+    width: 200px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    bottom: 40px; 
+    left: 60%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 14px;
+}
+
+.form-group:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
 /* Animations */
 @keyframes bounce {
     0%, 100% {
