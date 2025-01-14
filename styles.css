@@ -716,6 +716,13 @@ html {
   max-width: 400px;
 }
 
+
+.copyright {
+  font-size: 0.9rem;
+  padding: 1px 10px;
+  background-color: #222;
+}
+
 .social-icons {
   display: flex;
   justify-content: center;
@@ -792,4 +799,3 @@ html {
   color: #000000;
 }
 
-main {}
