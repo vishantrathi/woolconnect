@@ -113,11 +113,7 @@ html {
   .lastlink {
     display: none;
     flex-direction: column;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-    gap: 20px;
+    width: 100%;
     background: rgba(35, 35, 35, 0.95);
     text-align: center;
     padding: 20px;
@@ -309,7 +305,8 @@ html {
 .product-card button:hover {
   background-color: #1c1c1c;
 }
-/* !XXXXXXXXXXXXXXXXXXXXXXXX */
+
+/* Carousel Container */
 .carousel-container {
   display: flex;
   justify-content: center;
@@ -376,7 +373,6 @@ html {
 .carousel-buttons button:hover {
   background-color: #2563eb;
 }
-/*!XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  */
 
 /* TODO: STYLING FOR NEW SECTIONS AND CAROUSELS */
 
@@ -584,6 +580,7 @@ html {
   font-weight: bold;
   margin: 5px 0;
 }
+
 /*!   X - BANNER */
 
 /* Wrapper for the banner */
@@ -671,7 +668,8 @@ html {
   background-color: #e50019;
 }
 
-/*! PRODUCT_GALLER THE END */
+/*! PRODUCT_GALLERY THE END */
+
 /* Animations */
 @keyframes fadeIn {
   from {
@@ -697,6 +695,7 @@ html {
 }
 
 /* TODO: THE_END */
+
 /* Footer */
 .footer {
   background: #000000;
@@ -799,3 +798,4 @@ html {
   background: #fff;
   color: #000000;
 }
+

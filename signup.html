@@ -30,20 +30,21 @@
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
             </div>
-            </option>
             <div class="form-group">
                 <label for="State and City">State and City:</label>
-            <select onchange="print_city('state', this.selectedIndex);" id="sts" name ="stt" class="form-control" required></select>
-            <select id ="state" class="form-control" required></select>
-            <script language="javascript">print_state("sts");</script>
+                <select onchange="print_city('state', this.selectedIndex);" id="sts" name="stt" class="form-control" required></select>
+                <select id="state" class="form-control" required></select>
+                <script language="javascript">print_state("sts");</script>
             </div>
             <div class="form-group">
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required>
+                <input type="checkbox" id="show-password" onclick="togglePassword()"> Show Password
             </div>
             <div class="form-group">
                 <label for="confirm-password">Confirm Password:</label>
                 <input type="password" id="confirm-password" name="confirm-password" required>
+                <input type="checkbox" id="show-confirm-password" onclick="toggleConfirmPassword()"> Show Password
             </div>
             <div class="form-group">
                 <input type="checkbox" id="agree" name="agree" required>
@@ -54,6 +55,27 @@
                 <button type="submit" class="signup-btn">Sign Up</button>
         </form>
     </div>
+
+    <script>
+        function togglePassword() {
+            var passwordField = document.getElementById("password");
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+            } else {
+                passwordField.type = "password";
+            }
+        }
+
+        function toggleConfirmPassword() {
+            var confirmPasswordField = document.getElementById("confirm-password");
+            if (confirmPasswordField.type === "password") {
+                confirmPasswordField.type = "text";
+            } else {
+                confirmPasswordField.type = "password";
+            }
+        }
+    </script>
+
     <script src="signup.js"></script>
 </body>
 </html>
