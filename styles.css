@@ -586,7 +586,6 @@ html {
 }
 /*!   X - BANNER */
 
-
 /* Wrapper for the banner */
 .x-banner-wrapper {
   width: 100%;
@@ -718,22 +717,6 @@ html {
   max-width: 400px;
 }
 
-.social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-
-.social-icon {
-  color: #fff;
-  font-size: 1.2rem;
-  transition: color 0.3s ease;
-  padding-bottom: 10px;
-}
-
-.social-icon:hover {
-  color: #000000;
-}
 
 .copyright {
   font-size: 0.9rem;
@@ -804,16 +787,15 @@ html {
 }
 
 .auth-button {
-    color: #fff;
-    text-decoration: none;
-    border: 1px solid #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: all 0.5s ease-in-out;
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
 }
 
 .auth-button:hover {
-    background: #fff;
-    color: #000000;
+  background: #fff;
+  color: #000000;
 }
-
