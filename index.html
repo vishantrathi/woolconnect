@@ -316,44 +316,103 @@
       </section>
 
       <!--TODO: NEW ADD ON THE_END -->
+       <div style="height: 5px; background: linear-gradient(to right, #ff5757, #ff8e8e); margin-top: 12px;"></div>
+  <footer style="background: linear-gradient(to right, #000000, #434343); color: #ffffff; padding: 20px 15px; font-family: 'Arial', sans-serif; position: relative;">
+  <!-- Footer Container -->
+  <div class="footer-container" style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 20px;">
 
-      <footer class="footer">
-        <div class="footer-container">
-          <div class="footer-info">
-            <h2>Contact Us</h2>
-            <p>
-              If you have any questions or inquiries, feel free to reach out to
-              us.
-            </p>
-            <p>Email:
-              <a href="mailto:contact@woolconnect.com" style="color: white;" style="text-decoration: none;">contact@woolconnect.com</a></p>
-            <div class="social-icons">
-              <a href="#" class="social-icon"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-              <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-              <a href="#" class="social-icon"
-                ><i class="fab fa-instagram"></i
-              ></a>
-              <a href="#" class="social-icon"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
-            </div>
-          </div>
+    <!-- Left Section (Logo and Description) -->
+    <div class="footer-left" style="flex: 2; min-width: 250px;">
+      <!-- Logo -->
+      <div class="footer-logo" style="margin-bottom: 10px; text-align: center;">
+        <div style="background-color: #2b2b2a; padding: 15px; border-radius: 6px; display: inline-block;">
+          <img src="images/DALL·E 2023-09-11 20.54.30 - Make exact like this image.png" alt="Logo" style="width: 40px; height: 40px; margin-bottom: 8px;">
+          <h1 style="margin: 0; font-size: 28px; font-weight: bold;">Wool Connect.</h1>
         </div>
-
-        <div class="copyright">
-          <p>&copy; <span id="ThisYear"></span> Wool Connect. All Rights Reserved.</p>
-        </div>
-      </footer>
+      </div>
+      <!-- Description -->
+      <p style="font-size: 14px; line-height: 1.4; text-align: center;">
+        Wool is a natural, renewable fiber sourced from sheep and other animals, known for its warmth, softness, and durability. It’s perfect for creating comfortable, high-quality garments and textiles.
+      </p>
     </div>
-    <button id="scrollBtn" title="Go to top">
+
+    <!-- Quick Links Section -->
+    <div class="footer-section" style="flex: 1; min-width: 200px;">
+      <h2 style="font-size: 16px; margin-bottom: 8px;">Quick Links</h2>
+      <ul style="list-style: none; padding: 0;">
+        <li><a href="about.html" style="color: white; text-decoration: none; font-size: 14px;">Who We Are</a></li>
+        <li><a href="#" style="color: white; text-decoration: none; font-size: 14px;">Blog</a></li>
+        <li><a href="#" style="color: white; text-decoration: none; font-size: 14px;">Work With Us</a></li>
+        <li><a href="#" style="color: white; text-decoration: none; font-size: 14px;">Investor Relations</a></li>
+        <li><a href="contact.html" style="color: white; text-decoration: none; font-size: 14px;">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Learn More Section -->
+    <div class="footer-section" style="flex: 1; min-width: 200px;">
+      <h2 style="font-size: 16px; margin-bottom: 8px;">Learn More</h2>
+      <ul style="list-style: none; padding: 0;">
+        <li><a href="Privacy policy.html" style="color: white; text-decoration: none; font-size: 14px;">Privacy Policy</a></li>
+        <li><a href="terms and service.html" style="color: white; text-decoration: none; font-size: 14px;">Terms of Service</a></li>
+        <li><a href="contributors/contributor.html" style="color: white; text-decoration: none; font-size: 14px;">Our Contributors</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Social Links -->
+  <div class="social-links" style="text-align: center; margin-top: 20px;">
+    <ul style="list-style: none; padding: 0; display: flex; justify-content: center; gap: 15px;">
+      <li><a href="#" style="color: #ffffff; font-size: 18px; text-decoration: none;"><i class="fab fa-facebook-f"></i></a></li>
+      <li><a href="#" style="color: #ffffff; font-size: 18px; text-decoration: none;"><i class="fab fa-twitter"></i></a></li>
+      <li><a href="#" style="color: #ffffff; font-size: 18px; text-decoration: none;"><i class="fab fa-linkedin-in"></i></a></li>
+      <li><a href="#" style="color: #ffffff; font-size: 18px; text-decoration: none;"><i class="fab fa-youtube"></i></a></li>
+    </ul>
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom" style="text-align: center; margin-top: 10px; font-size: 12px;">
+    <p>&copy; <span id="ThisYear">2025</span> Wool Connect. All rights reserved.</p>
+  </div>
+
+  <!-- Footer Bottom Border -->
+  <div style="height: 5px; background: linear-gradient(to right, #414141, #000000); margin-top: 12px;"></div>
+</footer>
+
+      <button id="scrollBtn" title="Go to top">
       <i class="fa-solid fa-arrow-up fa-lg"></i>
     </button>
-    <script src="index.js"></script>
-   <script>
-   const currentYear= new Date().getFullYear();
-     document.getElementById('ThisYear').textContent = currentYear;
-   </script>
+
+    <script>
+      const toggleButton = document.getElementById("nav-toggle");
+      const navLinks = document.getElementById("nav-links");
+
+      toggleButton.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+
+      // Get the button element
+      const scrollBtn = document.getElementById("scrollBtn");
+
+      // Show the button when the user scrolls down 20px from the top
+      window.onscroll = function () {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          scrollBtn.style.display = "block";
+        } else {
+          scrollBtn.style.display = "none";
+        }
+      };
+
+      // Scroll to the top of the page when the button is clicked
+      scrollBtn.onclick = function () {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      };
+    </script>
   </body>
 </html>
