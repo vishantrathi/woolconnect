@@ -12,7 +12,18 @@ body {
   /* background: linear-gradient(to bottom, #333, #444); */
   color: #fff;
 }
-
+body::before {
+  content: '';
+  position: fixed; /* Fix the image to the viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('images/jean-marc-vieregge-cDKqFb-NOZc-unsplash.jpg') no-repeat center center fixed;
+  background-size: cover; /* Ensures the image covers the entire area */
+  filter: blur(6px); /* Blur the image */
+  z-index: -1; /* Keep the image behind the content */
+}
 header {
   background: linear-gradient(
     to right,
@@ -47,8 +58,50 @@ main {
   animation: slideIn 1.2s ease-in-out;
 }
 
-section {
-  margin-bottom: 30px;
+.container2 {
+  background-color: rgba(211, 207, 207, 0.9);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.container2 h1 {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #333;
+}
+
+.container2 section {
+  margin-bottom: 20px;
+}
+
+.container2 section h2 {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.container2 section p {
+  color: #6c757d;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.container2 section ul {
+  margin-top: 10px;
+  margin-left: 20px;
+  list-style-type: disc;
+}
+
+.container2 section ul li {
+  margin-bottom: 10px;
+  color: #555;
 }
 
 h2 {
