@@ -2,7 +2,7 @@
 
 Welcome to **WoolConnect**, an app-based solution designed to streamline the wool sector in India. 🧶 Our goal is to provide a comprehensive platform for wool producers, traders, and artisans, offering tools for efficient management, quality assurance, trading, and education.
 
-**Live Link:** https://vishantrathi.me/woolconnect/
+**Live Link** https://vishantrathi.github.io/woolconnect/
 
 ## ✨ Features
 
