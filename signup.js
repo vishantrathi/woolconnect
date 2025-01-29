@@ -1,132 +1,62 @@
-// Regular expression for name validation
-const nameRegex = /^[A-Za-z\s-]{2,50}$/;
+document.getElementById('show-signup').addEventListener('click', function (e) {
+    e.preventDefault();
+    document.getElementById('login-page').style.display = 'none';
+    document.getElementById('signup-page').style.display = 'block';
+});
 
-// Function to validate input fields
-function validateNameField(inputField, fieldName) {
-  const value = inputField.value.trim();
-  const errorId = `${inputField.id}-error`;
-  let errorDiv = document.getElementById(errorId);
+document.getElementById('show-login').addEventListener('click', function (e) {
+    e.preventDefault();
+    document.getElementById('signup-page').style.display = 'none';
+    document.getElementById('login-page').style.display = 'block';
+});
 
-  // Create error div if it doesn't exist
-  if (!errorDiv) {
-    errorDiv = document.createElement("div");
-    errorDiv.id = errorId;
-    errorDiv.className = "error-message";
-    errorDiv.style.color = "red";
-    errorDiv.style.fontSize = "12px";
-    errorDiv.style.marginTop = "5px";
-    inputField.parentNode.appendChild(errorDiv);
-  }
+document.getElementById('login-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const email = document.getElementById('login-email').value;
+    const password = document.getElementById('login-password').value;
 
-  // Validation checks
-  if (value.length === 0) {
-    errorDiv.textContent = `${fieldName} is required.`;
-    inputField.style.borderColor = "red";
-    return false;
-  } else if (value.length < 2) {
-    errorDiv.textContent = `${fieldName} must be at least 2 characters long.`;
-    inputField.style.borderColor = "red";
-    return false;
-  } else if (value.length > 50) {
-    errorDiv.textContent = `${fieldName} must not exceed 50 characters.`;
-    inputField.style.borderColor = "red";
-    return false;
-  } else if (!nameRegex.test(value)) {
-    errorDiv.textContent = `${fieldName} can only contain letters, spaces, and hyphens.`;
-    inputField.style.borderColor = "red";
-    return false;
-  } else {
-    errorDiv.textContent = "";
-    inputField.style.borderColor = "initial";
-    return true;
-  }
+    if (email && password) {
+        alert('Login successful!');
+        document.getElementById('login-page').style.display = 'none';
+        document.getElementById('chat-page').style.display = 'block';
+    } else {
+        alert('Please fill in all fields.');
+    }
+});
+
+document.getElementById('signup-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const email = document.getElementById('signup-email').value;
+    const password = document.getElementById('signup-password').value;
+    const confirmPassword = document.getElementById('confirm-password').value;
+
+    if (email && password && confirmPassword) {
+        if (password === confirmPassword) {
+            alert('Signup successful!');
+            document.getElementById('signup-page').style.display = 'none';
+            document.getElementById('chat-page').style.display = 'block';
+        } else {
+            alert('Passwords do not match.');
+        }
+    } else {
+        alert('Please fill in all fields.');
+    }
+});
+
+// Login Logic
+function login(email, password) {
+    window.location.href = 'index.html';
 }
 
-// Add event listeners when the document loads
-document.addEventListener("DOMContentLoaded", function () {
-  const nameInput = document.getElementById("name");
-  const surnameInput = document.getElementById("surname");
-  const passwordInput=document.getElementById("password");  
-  const confirmPasswordInput=document.getElementById("confirm-password");  
-  const form = document.querySelector("form");
+document.getElementById('login-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const email = document.getElementById('login-email').value;
+    const password = document.getElementById('login-password').value;
 
-  // Real-time validation
-  nameInput.addEventListener("input", function () {
-    validateNameField(this, "Name");
-  });
-
-  surnameInput.addEventListener("input", function () {
-    validateNameField(this, "Surname");
-  });
-
-  passwordInput.addEventListener("input", function(){
-    validatePasswordFields(passwordInput, confirmPasswordInput);
-  });
-
-  confirmPasswordInput.addEventListener("input", function(){
-    validatePasswordFields(passwordInput, confirmPasswordInput);
-  });
-
-
-
-  function  validatePasswordFields(passwordInput, confirmPasswordInput){
-    const password=passwordInput.value.trim();
-    const confirmPassword=confirmPasswordInput.value.trim();
-    const errorId=`${confirmPasswordInput.id}-error`;
-    let errorDiv=document.getElementById(errorId);
-
-    if(!errorDiv){
-      errorDiv=document.createElement("div");
-      errorDiv.id=errorId;
-      errorDiv.className="error-message";
-      errorDiv.style.color="red";
-      errorDiv.style.fontSize="12px";
-      errorDiv.style.marginTop="5px";
-      confirmPasswordInput.parentNode.appendChild(errorDiv);
-
-  
+    // Simple validation
+    if (email && password) {
+        login(email, password);
+    } else {
+        alert('Please fill in all fields.');
     }
-
-    if(password.length===0 || confirmPassword.length===0){
-      errorDiv.textContent="Password and Confirm password are required";
-      confirmPasswordInput.style.borderColor="red";
-      return false;
-    }
-    else if(password.length<6){
-      errorDiv.textContent="Password must be atleast 6 characters long";
-      passwordInput.style.borderColor="red";
-      return false;
-    }
-    else if(password.length>12){
-      errorDiv.textContent="Password must not exceed 12 characters";
-      confirmPasswordInput.style.borderColor="red";
-      return false;
-    }
-    else if(password!==confirmPassword){
-      errorDiv.textContent="Passwords do not match";
-      confirmPasswordInput.style.borderColor="red";
-      return false;
-    }
-    else{
-      errorDiv.textContent="";
-      passwordInput.style.borderColor="initial";
-      confirmPasswordInput.style.borderColor="initial";
-      return true;
-    }
-  }
-
-  
-
-  // Form submission validation
-  form.addEventListener("submit", function (event) {
-    const isNameValid = validateNameField(nameInput, "Name");
-    const isSurnameValid = validateNameField(surnameInput, "Surname");
-    const isPasswordValid=validatePasswordFields(passwordInput, confirmPasswordInput);
-
-    if (!isNameValid || !isSurnameValid || !isPasswordValid) {
-      event.preventDefault();
-    }
-  });
-
-
 });

@@ -7,7 +7,13 @@ html {
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-
+body::-webkit-scrollbar{
+  background: transparent;
+}
+body::-webkit-scrollbar-thumb{
+  background: linear-gradient(rgb(51, 51, 51), rgb(64, 64, 64), rgb(44, 43, 43));
+  border-radius: 2px;
+}
 .container {
   width: 100%;
   margin: 0 auto;

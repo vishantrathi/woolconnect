@@ -1,74 +1,88 @@
-/* Global Styles */
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-.logo img{
-    border-radius: 50%;
-    padding: 20px;
-}
-.container {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 40px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  background: url('https://images.unsplash.com/photo-1544195522-04e7c58ba945?q=80&w=1779&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: #111;
 }
 
-form {
-    text-align: center;
+/* Login and Signup Page */
+#login-page, #signup-page {
+  background: transparent;
+  backdrop-filter: blur(5px);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
 }
 
-h2 {
-    margin-top: 0;
+#login-page h1, #signup-page h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #21273f;
 }
 
+#login-page p, #signup-page p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: rgb(12, 39, 45);
+}
+#login-page p a, #signup-page p a{
+  color: red;
+} 
+/* Form Styles */
 .form-group {
-    margin-bottom: 20px;
-    text-align: left;
+  margin-bottom: 15px;
+  text-align: left;
 }
 
-label {
-    display: block;
-    font-weight: bold;
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 
-input[type="email"],
-input[type="tel"],
-input[type="text"],
-input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
 }
 
-button {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
+.form-group input:focus {
+  outline: none;
+  border-color: #667eea;
 }
 
-button:hover {
-    background-color: #555;
+/* Buttons */
+.btn {
+  padding: 10px 20px;
+  background: #21273f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
 }
 
-.signup-btn {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px; /* Rounded corners */
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.btn:hover {
+  background: #5a6fd1;
 }
 
-.signup-btn:hover {
-    background-color: #555;
+.btn-secondary {
+  background: #34a853;
 }
+
+.btn-secondary:hover {
+  background: #2d8c4a;
+}
+
+

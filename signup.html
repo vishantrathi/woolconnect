@@ -1,81 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="script.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
+    <title>Signup Page</title>
     <link rel="stylesheet" href="signup.css">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <div class="container">
-        <div class="nav">
-            <a href="#" class="logo"><img src="./images/DALL·E 2023-09-11 20.54.30 - Make exact like this image.png" alt="logo" height="100px" width="100px"></a>
-        <form action="signup.php" method="post">
-            <h2>Sign Up</h2>
-            <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="Enter the Name" required>
-            </div>
-            <div class="form-group">
-                <label for="surname">Surname:</label>
-                <input type="text" id="surname" name="surname" placeholder="Enter the Surname" required>
-            </div>
-            <div class="form-group">
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Enter your Email" required>
-            </div>
-            <div class="form-group">
-                <label for="State and City">State and City:</label>
-                <select onchange="print_city('state', this.selectedIndex);" id="sts" name="stt" class="form-control" required></select>
-                <select id="state" class="form-control" required></select>
-                <script language="javascript">print_state("sts");</script>
-            </div>
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="Create a strong password" required>
-                <input type="checkbox" id="show-password" onclick="togglePassword()"> Show Password
-            </div>
-            <div class="form-group">
-                <label for="confirm-password">Confirm Password:</label>
-                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
-                <input type="checkbox" id="show-confirm-password" onclick="toggleConfirmPassword()"> Show Password
-            </div>
-            <div class="form-group">
-                <input type="checkbox" id="agree" name="agree" required>
-                <label for="agree">I agree to our <a href="Trems and service.html" target="_blank">Terms and Services</a></label>
-            </div>
+  <!-- Login Page -->
+  <div id="login-page">
+    <h1>Login</h1>
+    <p>Welcome back! Please login to continue.</p>
+    <form id="login-form">
+        <div class="form-group">
+            <label for="login-email">Email</label>
+            <input type="email" id="login-email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" placeholder="Enter your password" required>
+        </div>
+        <button type="submit" class="btn">Login</button>
+    </form>
+    <p>Don't have an account? <a href="#" id="show-signup">Sign Up</a></p>
+</div>
 
-            <div class="form-group">
-                <button type="submit" class="signup-btn">Sign Up</button>
-        </form>
-    </div>
-
-    <script>
-        function togglePassword() {
-            var passwordField = document.getElementById("password");
-            if (passwordField.type === "password") {
-                passwordField.type = "text";
-            } else {
-                passwordField.type = "password";
-            }
-        }
-
-        function toggleConfirmPassword() {
-            var confirmPasswordField = document.getElementById("confirm-password");
-            if (confirmPasswordField.type === "password") {
-                confirmPasswordField.type = "text";
-            } else {
-                confirmPasswordField.type = "password";
-            }
-        }
-    </script>
+<!-- Signup Page -->
+<div id="signup-page" style="display: none;">
+    <h1>Sign Up</h1>
+    <p>Create a new account to get started.</p>
+    <form id="signup-form">
+        <div class="form-group">
+            <label for="signup-email">Email</label>
+            <input type="email" id="signup-email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+            <label for="signup-password">Password</label>
+            <input type="password" id="signup-password" placeholder="Create a password" required>
+        </div>
+        <div class="form-group">
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" placeholder="Confirm your password" required>
+        </div>
+        <button type="submit" class="btn btn-secondary">Sign Up</button>
+    </form>
+    <p>Already have an account? <a href="#" id="show-login">Login</a></p>
+</div>
 
     <script src="signup.js"></script>
+    
 </body>
 </html>
