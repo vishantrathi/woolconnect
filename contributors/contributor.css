@@ -15,24 +15,22 @@ body {
   justify-content: flex-start;
   padding: 20px;
   overflow-x: hidden;
-  position: relative; /* Needed for the background overlay */
+  position: relative;
 }
 
 body::before {
-  content: ""; /* Create an empty pseudo-element */
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('../images/raSxSYFwHiyY36AmSkBQQ-transformed.png') no-repeat center center fixed; /* Background image */
+  background: url('../images/raSxSYFwHiyY36AmSkBQQ-transformed.png') no-repeat center center fixed;
   background-size: cover;
-  filter: blur(10px); /* Blur effect */
-  z-index: -1; /* Place it behind all content */
-  transform: scale(1.1); /* Slight scale for better edge coverage */
+  filter: blur(10px);
+  z-index: -1;
+  transform: scale(1.1);
 }
-
-
 
 h1 {
   font-size: 2.5rem;
@@ -57,64 +55,100 @@ h1 {
 
 /* Contributor Card Styling */
 .contributor-card {
-  background: linear-gradient(135deg, #f5f5f5, #eaeaea); /* Light gradient for contrast */
-  color: #333;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
   border-radius: 15px;
   padding: 20px;
   width: 100%;
   max-width: 280px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 20px rgba(132, 129, 129, 0.2);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
-  border: 2px solid transparent; /* Default transparent border */
-  animation: pulse 2s infinite; /* Add subtle pulse animation to the entire card */
+  border: 2px solid transparent;
+  animation: pulse 2s infinite;
 }
 
 .contributor-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  border: 2px solid #004e64; /* Subtle blue border effect */
+  box-shadow: 0 10px 30px rgba(97, 93, 93, 0.3);
+  border: 2px solid #0f0f0f;
 }
 
 .contributor-card img {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
-  border: 4px solid #000000; /* Default black border */
-  transition: border 0.3s ease, transform 0.3s ease;
+  border: 4px solid #0e0e0e;
+  transition: transform 0.3s ease;
   margin-bottom: 15px;
 }
 
 .contributor-card img:hover {
-  border: 6px solid #000000; /* Thicker black border on hover */
-  transform: scale(1.1); /* Slight zoom-in effect */
+  transform: scale(1.1) rotate(5deg);
 }
 
 .contributor-card h3 {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   margin: 10px 0;
-  color: #191813;
+  color: #222;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .contributor-card p {
-  font-size: 0.9rem;
-  color: #555;
-  margin-bottom: 15px;
+  font-size: 0.95rem;
+  color: #666;
+  margin-top: 8px;
+  line-height: 1.4;
 }
 
 .contributor-card a {
   display: inline-block;
-  margin: 5px 0;
-  color: #004e64;
-  font-weight: bold;
+  margin-top: 10px;
+  padding: 8px 15px;
+  font-size: 0.9rem;
   text-decoration: none;
-  transition: color 0.3s ease;
+  color: #fff;
+  background: #1e1d1c;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .contributor-card a:hover {
-  color: #191813;
-  text-decoration: underline;
+  background: #161614;
+  transform: translateY(-3px);
+}
+
+/* Certificate Button Styling */
+.certificate-button {
+  background: linear-gradient(to right, #0f0f0f, #0f0f0f); /* Warm cream gradient */
+  color: #fff; /* Black text */
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: 2px solid #0f0f0f; /* Dark brown border */
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  outline: none;
+  text-transform: uppercase;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 10px; /* Added margin to create space between buttons */
+}
+
+.certificate-button:hover {
+  background: linear-gradient(to right, #0f0f0f, #0f0f0f); /* Softer cream */
+  color: #fff; /* Dark brown text */
+  box-shadow: 5px 5px 15px rgba(129, 126, 126, 0.3);
+  transform: scale(1.05);
+}
+
+.certificate-button:active {
+  transform: scale(0.98);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Dynamic Pulse Animation */
@@ -124,8 +158,8 @@ h1 {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   }
   50% {
-    transform: scale(1.04); /* Dynamic scale for smoother effect */
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* Brighter shadow */
+    transform: scale(1.04);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
   }
   100% {
     transform: scale(1);
@@ -155,24 +189,7 @@ h1 {
   transform: scale(1.2);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-  }
-
-  .contributors-grid {
-    gap: 15px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .contributors-grid {
-    gap: 25px;
-  }
-}
-
+/* Footer */
 .footer {
   background: #000000;
   color: #fff;
@@ -192,13 +209,6 @@ h1 {
   max-width: 400px;
 }
 
-
-.copyright {
-  font-size: 0.9rem;
-  padding: 1px 10px;
-  background-color: #222;
-}
-
 .social-icons {
   display: flex;
   justify-content: center;
@@ -214,51 +224,6 @@ h1 {
 
 .social-icon:hover {
   color: #3e3636;
-}
-
-.copyright {
-  font-size: 0.9rem;
-  padding: 1px 10px;
-  background-color: #222;
-}
-
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
-/* Scroll button styles */
-#scrollBtn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  display: none;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  padding: 15px;
-  font-size: 18px;
-  cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-#scrollBtn i {
-  pointer-events: none;
-  transition: transform 0.3s ease;
-}
-
-/* Hover effect */
-#scrollBtn:hover {
-  background-color: #0056b3;
-  transform: scale(1.1); /* Slightly enlarges the button */
-}
-
-#scrollBtn:hover i {
-  transform: scale(1.2); /* Slightly enlarges the icon */
 }
 
 .auth-button {
