@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work With Us</title>
+    <link rel="icon" href="../Utils/20240921_154411.png">
+    <link rel="stylesheet" href="workwithus.css">
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="icon" href="images/DALL·E 2023-09-11 20.54.30 - Make exact like this image.png" type="image/png">
+    <link rel="stylesheet" href="navbar.css">
+</head>
+<style>
+    /* Success Popup Styling */
+    .success-animation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #edf1ea;
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 400px;
+        margin: 20px auto;
+        text-align: center;
+        display: none;
+    }
+
+    .green-tick {
+        font-size: 40px;
+        color: black;
+    }
+
+    .btn-info {
+        background-color: black;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    .btn-info:hover {
+        background-color: black;
+    }
+</style>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="navcontainer">
+                <a href="#" class="logo">
+                    <img src="./images/DALL·E 2023-09-11 20.54.30 - Make exact like this image.png" alt="logo" height="50" width="50"/>
+                </a>
+                <div class="auth-buttons" style="display: flex; gap: 10px; margin-left: 20px;">
+                    <a href="signup.html" class="auth-button">SignUp</a>
+                </div>
+                <button class="nav-toggle" id="nav-toggle">☰</button>
+                <ul class="nav-links" id="nav-links" style="margin-left: auto;">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact Doctor</a></li>
+                    <li><a href="demand.html">Demand</a></li>
+                    <li><a href="Privacy policy.html">Privacy Policy</a></li>
+                    <li><a href="terms and service.html">Terms and Services</a></li>
+                    <li><a href="contributors/contributor.html">Contributors</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Contact Us Form -->
+        <section id="contact-us">
+            <div class="contact-header">
+                <h2><b>Contact Us</b></h2>
+            </div>
+            <div class="contact-container">
+                <div class="contact-form">
+                    <form id="feedbackForm">
+                        <input type="hidden" name="access_key" value="24c2d733-3b85-4b25-9d33-ee0fdb1040d8">
+                        <label for="first_name">First Name*</label>
+                        <input type="text" id="first_name" name="first_name" placeholder="Enter your first name" required>
+
+                        <label for="last_name">Last Name</label>
+                        <input type="text" id="last_name" name="last_name" placeholder="Enter your last name">
+
+                        <label for="job_title">Job Title*</label>
+                        <input type="text" id="job_title" name="job_title" placeholder="Enter your job title" required>
+
+                        <label for="email">Email Address*</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+                        <label for="phone_number">Phone Number*</label>
+                        <input type="text" id="phone_number" name="phone_number" placeholder="Enter your phone number" required>
+
+                        <label for="address_line_1">Address Line 1*</label>
+                        <input type="text" id="address_line_1" name="address_line_1" placeholder="Enter your address line 1" required>
+
+                        <label for="address_line_2">Address Line 2 (Optional)</label>
+                        <input type="text" id="address_line_2" name="address_line_2" placeholder="Enter your address line 2">
+
+                        <label for="state">State*</label>
+                        <input type="text" id="state" name="state" placeholder="Enter your state" required>
+
+                        <label for="district">District*</label>
+                        <input type="text" id="district" name="district" placeholder="Enter your district" required>
+
+                        <label for="city">City*</label>
+                        <input type="text" id="city" name="city" placeholder="Enter your city" required>
+
+                        <label for="pin_code">Pin Code*</label>
+                        <input type="text" id="pin_code" name="pin_code" placeholder="Enter your pin code" required>
+
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Enter your message or additional information"></textarea>
+
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Success Popup -->
+        <div id="successPopup" class="success-animation">
+            <div class="green-tick">✔</div>
+            <p class="success-message">Your message has been submitted successfully!</p>
+            <p class="success-note">Our team will get back to you soon.</p>
+            <button type="button" class="btn btn-info" onclick="restartFeedback()">Go Back</button>
+        </div>
+
+        <!-- Footer -->
+        <footer style="background: linear-gradient(to right, #000000, #434343); color: #ffffff; padding: 20px 15px; font-family: 'Arial', sans-serif; position: relative;">
+            <!-- Footer Container -->
+            <div class="footer-container" style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 20px;">
+                <!-- Left Section (Logo and Description) -->
+                <div class="footer-left" style="flex: 2; min-width: 250px;">
+                    <!-- Logo -->
+                    <div class="footer-logo" style="margin-bottom: 10px; text-align: center;">
+                        <div style="background-color: #2b2b2a; padding: 15px; border-radius: 6px; display: inline-block;">
+                            <img src="images/DALL·E 2023-09-11 20.54.30 - Make exact like this image.png" alt="Logo" style="width: 40px; height: 40px; margin-bottom: 8px;">
+                            <h1 style="margin: 0; font-size: 28px; font-weight: bold;">Wool Connect.</h1>
+                        </div>
+                    </div>
+                    <!-- Description -->
+                    <p style="font-size: 14px; line-height: 1.4; text-align: center;">
+                        Wool is a natural, renewable fiber sourced from sheep and other animals, known for its warmth, softness, and durability. It’s perfect for creating comfortable, high-quality garments and textiles.
+                    </p>
+                </div>
+
+                <!-- Quick Links Section -->
+                <div class="footer-section" style="flex: 1; min-width: 200px;">
+                    <h2 style="font-size: 16px; margin-bottom: 8px;">Quick Links</h2>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="about.html" style="color: white; text-decoration: none; font-size: 14px;">Who We Are</a></li>
+                        <li><a href="#" style="color: white; text-decoration: none; font-size: 14px;">Blog</a></li>
+                        <li><a href="workwithus.html" style="color: white; text-decoration: none; font-size: 14px;">Work With Us</a></li>
+                        <li><a href="#" style="color: white; text-decoration: none; font-size: 14px;">Investor Relations</a></li>
+                        <li><a href="contact.html" style="color: white; text-decoration: none; font-size: 14px;">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Learn More Section -->
+                <div class="footer-section" style="flex: 1; min-width: 200px;">
+                    <h2 style="font-size: 16px; margin-bottom: 8px;">Learn More</h2>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="Privacy policy.html" style="color: white; text-decoration: none; font-size: 14px;">Privacy Policy</a></li>
+                        <li><a href="terms and service.html" style="color: white; text-decoration: none; font-size: 14px;">Terms of Service</a></li>
+                        <li><a href="contributors/contributor.html" style="color: white; text-decoration: none; font-size: 14px;">Our Contributors</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Social Links -->
+            <div class="social-links" style="text-align: center; margin-top: 20px;">
+                <ul style="list-style: none; padding: 0; display: flex; justify-content: center; gap: 15px;">
+                    <li><a href="#" style="color: #ffffff; font-size: 18px; text-decoration: none;"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#" style="color: #ffffff; font-size: 18px; text-decoration: none;"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#" style="color: #ffffff; font-size: 18px; text-decoration: none;"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li><a href="#" style="color: #ffffff; font-size: 18px; text-decoration: none;"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom" style="text-align: center; margin-top: 10px; font-size: 12px;">
+                <p>&copy; <span id="ThisYear">2025</span> Wool Connect. All rights reserved.</p>
+            </div>
+
+            <!-- Footer Bottom Border -->
+            <div style="height: 5px; background: linear-gradient(to right, #414141, #000000); margin-top: 12px;"></div>
+        </footer>
+    </div>
+
+    <script>
+        const form = document.getElementById('feedbackForm');
+        const successPopup = document.getElementById('successPopup');
+        
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent page reload
+            successPopup.style.display = 'flex'; // Show success popup
+        });
+
+        function restartFeedback() {
+            successPopup.style.display = 'none'; // Hide success popup
+            form.reset(); // Reset form fields
+        }
+    </script>
+</body>
+</html>
