@@ -17,10 +17,12 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
+
+    <link rel="stylesheet" href="navbar.css">
   </head>
   <body>
     <header>
-      <!-- Navbar Section -->
+      <div class="container">
       <nav class="navbar">
         <div class="navcontainer">
           <!-- Logo -->
@@ -32,29 +34,29 @@
               width="50"
             />
           </a>
-
+  
+          <!-- Login and SignUp Buttons -->
+          <div class="auth-buttons" style="display: flex; gap: 10px; margin-left: 20px;">
+            <a href="Log in.html" class="auth-button">Login</a>
+            <a href="signup.html" class="auth-button">SignUp</a>
+          </div>
+  
           <!-- Navbar Toggle Button for Mobile -->
           <button class="nav-toggle" id="nav-toggle">☰</button>
-
+  
           <!-- Navbar Links -->
-          <ul class="nav-links" id="nav-links">
+          <ul class="nav-links" id="nav-links" style="margin-left: auto;">
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
+            <li><a href="about.html" class="active">About</a></li>
             <li><a href="contact.html">Contact Doctor</a></li>
             <li><a href="demand.html">Demand</a></li>
             <li><a href="Privacy policy.html">Privacy Policy</a></li>
-            <li><a href="Trems and service.html">Terms and Services</a></li>
+            <li><a href="terms and service.html">Terms and Services</a></li>
+            <li><a href="contributors/contributor.html">Contributors</a></li>
           </ul>
-
-          <!-- Additional Links -->
-          <div class="lastlink">
-            <ul>
-              <li><a href="Log in.html">Login</a></li>
-              <li><a href="signup.html">SignUp</a></li>
-            </ul>
-          </div>
         </div>
       </nav>
+    </div>  
 
       <!-----navbar end-->
     </header>
