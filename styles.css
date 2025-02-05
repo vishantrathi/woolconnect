@@ -465,6 +465,14 @@ body::-webkit-scrollbar-thumb{
   transition: transform 0.5s ease, box-shadow 0.3s ease;
 }
 
+@media(max-width:500px){
+
+  .blog-card{
+    max-width:90vw;
+  }
+}
+
+
 .blog-card:hover {
   transform: translateY(-10px);
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
