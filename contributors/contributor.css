@@ -67,6 +67,7 @@ h1 {
   position: relative;
   border: 2px solid transparent;
   animation: pulse 2s infinite;
+  color:#000000;
 }
 
 .contributor-card:hover {
