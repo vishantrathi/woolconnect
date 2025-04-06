@@ -17,13 +17,13 @@ body {
 header {
   background: linear-gradient(
     90deg,
-    #6a0572,
-    #a40606
+    #262424,
+    #262424
   ); /* Darker gradient header */
   color: #fff;
   text-align: center;
   padding: 20px 0;
-  border-bottom: 4px solid #ff758c;
+  border-bottom: 4px solid #000000;
 }
 
 header h1 {
@@ -77,9 +77,9 @@ textarea {
 
 input:focus,
 textarea:focus {
-  border-color: #ff758c;
+  border-color: #413e3f;
   outline: none;
-  box-shadow: 0 0 8px rgba(255, 117, 140, 0.5); /* Glow effect on focus */
+  box-shadow: 0 0 8px rgba(22, 21, 22, 0.5); /* Glow effect on focus */
 }
 
 textarea {
@@ -91,9 +91,7 @@ textarea {
 .submit {
   background: linear-gradient(
     90deg,
-    #000000,
-    #00b712,
-    #f7ff00
+    #000000
   ); /* Black, Green, Yellow gradient */
   color: #fff;
   padding: 15px 30px;
@@ -118,10 +116,9 @@ textarea {
   box-shadow: 0 10px 20px rgba(0, 183, 18, 0.6); /* Glow effect with green tint */
   background: linear-gradient(
     90deg,
-    #f7ff00,
-    #00b712,
     #000000
-  ); /* Reverse gradient on hover */
+  );
+
 }
 
 .submit:active {
@@ -132,7 +129,6 @@ textarea {
 /* adding tooltips */
 .tooltip {
     visibility: hidden;
-    background: linear-gradient(90deg, #6a0572, #a40606);
     color: #fff;    
     width: 200px;
     text-align: center;
@@ -175,7 +171,7 @@ footer {
   text-align: center;
   padding: 10px 0;
   margin-top: 20px;
-  border-top: 4px solid #ff758c;
+  border-top: 4px solid #383637;
 }
 
 /* Animations */
